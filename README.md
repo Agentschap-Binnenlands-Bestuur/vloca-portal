@@ -6,4 +6,4 @@ Branches contain design ideas.
 Download the repository.
 Install jekyll.
 Run `jekyll build`.
-Serve the files in `/_site` on a webserver.
+Serve the files in `/_site` on a webserver or use `jekyll s` and browse to https://localhost:4444 (unless you've changed that).
