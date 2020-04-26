@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{% assign events = site.events | sort: 'startDate' | reverse %}
+{% capture nowunix %}{{'now' | date: '%y%m%d'}}{% endcapture %}
+
+
+
+<div class="home layout layout--wide">
+  <h1 class="h1">Een ondersteuningsprogramma van de Vlaamse Overheid voor real-time Open Data bij lokale overheden</h1>
+  <p style="text-align: justify;margin-bottom: 1.5em">Vlaams minister voor Binnenlands Bestuur Liesbeth Homans lanceerde op 1 januari 2017 het Smart Flanders-programma, een ondersteuningsprogramma dat door onderzoekers van <a href="https://imec.be">imec</a>&nbsp;uitgevoerd wordt en loopt tot eind 2019. De Vlaamse overheid ondersteunt daarmee de 13 centrumsteden en de Vlaamse Gemeenschapscommissie voor Brussel in hun ontwikkeling tot smart cities. Smart Flanders doet dit door te focussen op real-time open data en gedeelde referentiemodellen, en is erop gericht samenwerking tussen steden en actoren uit de quadruple helix te stimuleren. De gezamenlijke basisprincipes werden gevat in een stedelijk <a href="https://smart.flanders.be/open-data-charter/" target="_blank">Open Data Charter</a> dat in 2018 door de 13 centrumsteden aangenomen werd. Ook de Vlaamse Overheid zag het belang van deze gedeelde afspraken en nam het Open Data Charter over.</p>
+
+  <section><img src="assets/VLOCA voorkant.png"/></section>
+
+  <section>
+  <p style="text-align: justify;margin-top: 1.5em">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia dui ac venenatis placerat. Sed et ornare turpis. Sed at odio in libero tempor pharetra. Phasellus scelerisque convallis bibendum. Aenean lacus lectus, posuere nec nisi ac, congue sodales nisi. Aliquam in molestie risus. Maecenas pulvinar sit amet mi accumsan aliquam. Etiam porttitor, leo at pulvinar maximus, turpis ipsum bibendum nisi, non tincidunt eros ex et magna. Vestibulum lorem massa, malesuada ut felis id, ornare pharetra nisl. Suspendisse ac felis id nibh laoreet rhoncus.
+  </p>
+  <p style="text-align: justify;margin-top: 1.5em">
+  Sed fermentum id dui eu cursus. Morbi dui felis, tempus eu lectus at, dapibus finibus risus. Proin non dictum libero. Pellentesque rhoncus posuere tortor tristique fermentum. Suspendisse ultrices odio non diam luctus, quis interdum nisi porttitor. Maecenas vulputate neque quam, at vehicula risus tincidunt vitae. Ut ac risus dui. 
+  </p>
+</section>
+  <section class="region">
+      <div class="layout layout--wide">
+        <h3 class="h3" id="nieuws">Nieuws en opinies</h3>
+        <div class="slider js-slider">
+            <div class="slider__frame js-slider__frame">
+                <div class="grid grid--is-stacked js-equal-height-container slider__slides js-slider__slides">
+                    {% for post in site.posts %}
+                        <div class="col--3-12 col--8-12--xs col--5-12--s col--4-12--m">
+                            <a href="{{ post.url | relative_url }}" class="news-teaser js-equal-height">
+                                <article>
+                                    <!--<div class="news-teaser__image">
+                                        <img src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/images/vla_nieuwsartikel_weekvandemobiliteit2016_0.gif" alt="Image for news message">
+                                    </div>-->
+                                    <div class="news-teaser__content">
+                                        <h2 class="news-teaser__label">{{ post.category }}</h2>
+                                        <h1 class="news-teaser__title">{{ post.title | escape }}</h1>
+                                        <h2 class="news-teaser__label nobold">{{ post.date | date: "%d %b %y" }}</h2>
+                                    </div>
+                                </article>
+                            </a>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="region">
+        <div class="layout layout--wide">
+            <h3 class="h3" id="status">Huidige status</h3>
+            <ul class="bullet-list bullet-list--check">
+              <li class="bullet-list__item">Kennishub, VLOCA portaal en eerste versies van op te leveren architectuurdocumenten zijn in aanmaak.</a></li>
+            </ul>
+        </div>
+    </section>
+</div>

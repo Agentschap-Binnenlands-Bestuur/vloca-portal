@@ -13,29 +13,33 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: VLOCA portaal
+title: Kennishub Vlaamse Open City Architectuur
 email: stedenbeleid@vlaanderen.be
-description: >- # this means to ignore newlines until "baseurl:"
-  Portal site for the Flemish governments Flemish Open City Architecture (Vlaamse Open City Architectuur, VLOCA) initiative.
+description: > # this means to ignore newlines until "baseurl:"
+   Co-creatie en kennisdelingsplatform voor de Vlaamse Open City Architectuur
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://vlaanderen.be/vloca" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: vl_stedenbeleid
-github_username:  Agentschap-Binnenlands-Bestuur
+#github_username: smartflanders
 
 # Build settings
 markdown: kramdown
-theme: minima
 plugins:
   - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+# Collections
+collections:
+  events:
+    output: true
+    permalink: /:collection/:path/
+  resources:
+    output: true
+    permalink: /:collection/:path/
+  piloten:
+    output: true
+    permalink: /:collection/:path/
+  initiatives:
+    output: true

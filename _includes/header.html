@@ -1,0 +1,47 @@
+<header class="content-header" role="banner">
+  <div class="content-header__wrapper">
+    <picture>
+      <!--[if IE 9]>
+      <video style="display: none;"><![endif]-->
+      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1x" media="(min-width: 1024px)">
+      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 1x" media="(max-device-width: 767px)">
+      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1x" media="(max-width: 1023px)">
+      <!--[if IE 9]></video><![endif]-->
+      <!--[if lt IE 9]>
+      <img itemprop="image" src=//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" alt="" title=""/>
+      <![endif]-->
+      <!--[if !lt IE 9]><!-->
+      <img src="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 320w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1024w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1600w" alt="" title="">
+      <!-- <![endif]-->
+    </picture>
+    <div class="layout layout--wide">
+      <div class="content-header__content">
+          <h1 class="content-header__title"><span class="content-header__title__content"><a class="link-no-style" href="{{ "/" | relative_url}}">Smart Flanders</a></span></h1>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="tabs__wrapper">
+  <ul class="tabs tabs--alt" data-tabs-list>
+      <li class="tab">
+        <a class="tab__link" href="{{ "/" | relative_url}}"><i class="fa fa-home" aria-hidden="true"></i></a>
+      </li>
+        {% assign mypages = site.pages | sort: "order" %}{% for my_page in mypages %}
+            {% if my_page.title %}
+                <li class="tab">
+                    <a class="tab__link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+                </li>
+            {% endif %}
+                {% endfor %}
+        {% if site.github_username %}
+            <li class="tab">
+                {% include icon-github.html username=site.github_username %}
+            </li>
+        {% endif %}
+        {% if site.twitter_username %}
+            <li class="tab">
+                {% include icon-twitter.html username='search?q=%23smartflanders' %}
+            </li>
+        {% endif %}
+  </ul>
+</div>

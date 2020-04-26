@@ -1,0 +1,37 @@
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+    <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link rel="stylesheet" href="//dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui.css" type="text/css">
+  <link rel="stylesheet" href="//dij151upo6vad.cloudfront.net/2.latest/css/vlaanderen-ui-corporate.css" type="text/css">
+    <!-- link to Flanders UI stylesheet -->
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  <!-- Card in Twitter, Facebook, Slack ... -->
+  <meta name="description" content="{{site.description}}"/>
+  <meta name="keywords" content="smart city"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta property="og:title" content="{{site.title}}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://smart.flanders.be/" />
+  <meta property="og:image" content="https://smart.flanders.be/assets/Label_Smart_Flanders.png" />
+  <meta property="og:description" content="{{site.description}}" />
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:site" content="@imec_int"/>
+  <meta name="twitter:title" content="{{site.title}}"/>
+  <meta name="twitter:description" content="{{site.description}}"/>
+  <meta name="twitter:image" content="https://smart.flanders.be/assets/Label_Smart_Flanders.png" />
+  <meta name="twitter:url" content="https://smart.flanders.be" />
+  {% if jekyll.environment == 'production' and site.google_analytics %}
+  {% include google-analytics.html %}
+  {% endif %}
+  <script src="https://use.fontawesome.com/415c4aae00.js"></script>
+  <script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+  <script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/b1c0577e442340948b60437b8dd58362"></script>
+  <script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</head>

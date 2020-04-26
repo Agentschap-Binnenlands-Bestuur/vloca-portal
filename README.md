@@ -1,7 +1,7 @@
 # VLOCA-portal
 Jekyll site for the Flemish government "Vlaamse Open City Architectuur" initiative.
 ## Branches
-Branches contain design ideas.
+This branch contains a clone of smart.flanders.be
 ## Build the site
 Download the repository.
 Install jekyll.
