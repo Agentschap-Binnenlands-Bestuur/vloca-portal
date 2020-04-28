@@ -1,25 +1,19 @@
 <header class="content-header" role="banner">
-  <div class="content-header__wrapper">
-    <picture>
-      <!--[if IE 9]>
-      <video style="display: none;"><![endif]-->
-      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1x" media="(min-width: 1024px)">
-      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 1x" media="(max-device-width: 767px)">
-      <source srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1x" media="(max-width: 1023px)">
-      <!--[if IE 9]></video><![endif]-->
-      <!--[if lt IE 9]>
-      <img itemprop="image" src=//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" alt="" title=""/>
-      <![endif]-->
-      <!--[if !lt IE 9]><!-->
-      <img src="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg" srcset="//www.vlaanderen.be/sites/default/files/ip_acm/page_banner_mobile_alt/header.jpg 320w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_narrow/header.jpg 1024w, //www.vlaanderen.be/sites/default/files/ip_acm/page_banner_wide_alt/header.jpg 1600w" alt="" title="">
-      <!-- <![endif]-->
-    </picture>
-    <div class="layout layout--wide">
-      <div class="content-header__content">
-          <h1 class="content-header__title"><span class="content-header__title__content"><a class="link-no-style" href="{{ "/" | relative_url}}">Smart Flanders</a></span></h1>
-      </div>
-    </div>
-  </div>
+	<div class="content-header__wrapper">
+		<picture>
+		<source media="(min-width: 1024px)" srcset="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1x">
+			<source media="(max-device-width: 767px)" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 1x">
+				<source media="(max-width: 1023px)" srcset="{{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1x">
+					<img alt="" src="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 320w, {{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1024w, {{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1600w" title="">
+		</picture>
+
+		<div class="layout layout--wide">
+			<div class="content-header__content">
+				<h1 class="content-header__title"><span class="content-header__title__content">Vlaamse Open City Architectuur</span>
+				</h1>
+			</div>
+		</div>
+	</div>
 </header>
 <div class="tabs__wrapper">
   <ul class="tabs tabs--alt" data-tabs-list>
