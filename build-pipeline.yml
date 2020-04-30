@@ -21,7 +21,7 @@ steps:
  
 - script: |
     bundle install
-    jekyll build
+    bundle exec jekyll build
   displayName: 'jekyll'
  
 - task: CopyFiles@2
