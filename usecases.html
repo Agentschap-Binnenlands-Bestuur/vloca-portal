@@ -10,12 +10,13 @@ order: 3
 			<div class="js-scrollspy__content">
 				<h1 class="h1" id="about">Smart City Use Cases</h1>
 				<section>
-					<ul class="ul">
-						<li>Dencity</li>
-						<li>Leuvenair</li>
-						<li>Curieuzeneuzen</li>
-					</ul>
-					<p>Dit moet uiteraard een jekyll collection worden met prentjes en co. Tof tof.</p>
+					<ul class="bullet-list bullet-list--tag">
+						{% for usecase in site.usecases %}
+						<li class="bullet-list__item">
+							<a href="{{ site.baseurl }}/{{ usecase.url }}">{{ usecase.title }}</a>: {{ usecase.tagline }}
+						</li>
+						{% endfor %}
+					</ul>	
 				</section>
 			</div>
 		</div>
