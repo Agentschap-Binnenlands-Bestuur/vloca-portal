@@ -2,7 +2,7 @@
 title: Ambtelijke stuurgroep 01
 layout: post
 category: Category 1
-teaser: Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.
+teaser: Dit is een teaser text voor mijn post
 ---
 De ambtelijke stuurgroep kwam voor de eerste keer - virtueel - samen.
 

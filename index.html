@@ -1,60 +1,187 @@
 ---
 layout: default
+teaser: Dit is de homepage-teaser
+is_front: true
 ---
 {% assign events = site.events | sort: 'startDate' | reverse %}
 {% capture nowunix %}{{'now' | date: '%y%m%d'}}{% endcapture %}
 
+<div class="home layout">
 
-
-<div class="home layout layout--wide">
-  <h1 class="h1">Een ondersteuningsprogramma van de Vlaamse Overheid voor real-time Open Data bij lokale overheden</h1>
-  <p style="text-align: justify;margin-bottom: 1.5em">Vlaams minister voor Binnenlands Bestuur Liesbeth Homans lanceerde op 1 januari 2017 het Smart Flanders-programma, een ondersteuningsprogramma dat door onderzoekers van <a href="https://imec.be">imec</a>&nbsp;uitgevoerd wordt en loopt tot eind 2019. De Vlaamse overheid ondersteunt daarmee de 13 centrumsteden en de Vlaamse Gemeenschapscommissie voor Brussel in hun ontwikkeling tot smart cities. Smart Flanders doet dit door te focussen op real-time open data en gedeelde referentiemodellen, en is erop gericht samenwerking tussen steden en actoren uit de quadruple helix te stimuleren. De gezamenlijke basisprincipes werden gevat in een stedelijk <a href="https://smart.flanders.be/open-data-charter/" target="_blank">Open Data Charter</a> dat in 2018 door de 13 centrumsteden aangenomen werd. Ook de Vlaamse Overheid zag het belang van deze gedeelde afspraken en nam het Open Data Charter over.</p>
-
-  <section><img src="{{ site.baseurl }}/assets/img/VLOCA voorkant.png"/></section>
-
-  <section>
-  <p style="text-align: justify;margin-top: 1.5em">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla lacinia dui ac venenatis placerat. Sed et ornare turpis. Sed at odio in libero tempor pharetra. Phasellus scelerisque convallis bibendum. Aenean lacus lectus, posuere nec nisi ac, congue sodales nisi. Aliquam in molestie risus. Maecenas pulvinar sit amet mi accumsan aliquam. Etiam porttitor, leo at pulvinar maximus, turpis ipsum bibendum nisi, non tincidunt eros ex et magna. Vestibulum lorem massa, malesuada ut felis id, ornare pharetra nisl. Suspendisse ac felis id nibh laoreet rhoncus.
-  </p>
-  <p style="text-align: justify;margin-top: 1.5em">
-  Sed fermentum id dui eu cursus. Morbi dui felis, tempus eu lectus at, dapibus finibus risus. Proin non dictum libero. Pellentesque rhoncus posuere tortor tristique fermentum. Suspendisse ultrices odio non diam luctus, quis interdum nisi porttitor. Maecenas vulputate neque quam, at vehicula risus tincidunt vitae. Ut ac risus dui. 
-  </p>
-</section>
   <section class="region">
-      <div class="layout layout--wide">
-        <h3 class="h3" id="nieuws">Nieuws en opinies</h3>
-        <div class="slider js-slider">
-            <div class="slider__frame js-slider__frame">
-                <div class="grid grid--is-stacked js-equal-height-container slider__slides js-slider__slides">
-                    {% for post in site.posts %}
-                        <div class="col--3-12 col--8-12--xs col--5-12--s col--4-12--m">
-                            <a href="{{ post.url | relative_url }}" class="news-teaser js-equal-height">
-                                <article>
-                                    <!--<div class="news-teaser__image">
-                                        <img src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/images/vla_nieuwsartikel_weekvandemobiliteit2016_0.gif" alt="Image for news message">
-                                    </div>-->
-                                    <div class="news-teaser__content">
-                                        <h2 class="news-teaser__label">{{ post.category }}</h2>
-                                        <h1 class="news-teaser__title">{{ post.title | escape }}</h1>
-                                        <h2 class="news-teaser__label nobold">{{ post.date | date: "%d %b %y" }}</h2>
-                                    </div>
-                                </article>
-                            </a>
-                        </div>
-                    {% endfor %}
-                </div>
-            </div>
+    <div class='layout layout--wide'>
+      <div class="grid grid--is-stacked">
+        <div class="col--6-12 col--1-1--s">
+          <h1 class="h1">VLOCA Portaal</h1>
+          <p class="intro">Welkom op ons VLOCA Portaal. Bouw mee aan diverse projecten en toepassingen voor slimme steden, gemeenten en regio’s in Vlaanderen.</p>
+          <a class="button button__primary" href="#">Meer weten over VLOCA</a>
         </div>
-
+        <div class="col--6-12 col--1-1--s">
+          <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="region">
-        <div class="layout layout--wide">
-            <h3 class="h3" id="status">Huidige status</h3>
-            <ul class="bullet-list bullet-list--check">
-              <li class="bullet-list__item">Kennishub, VLOCA portaal en eerste versies van op te leveren architectuurdocumenten zijn in aanmaak.</a></li>
-            </ul>
+  <section class="region">
+    <div class='layout layout--wide'>
+      <div class="direct-to wide">
+        <label>Direct naar</label>
+        <div class="grid grid--is-stacked">
+          {% for post in site.posts %}
+          <div class="col--4-12 col--6-12--s col--1-1--xs">
+              <a href="" class="link--icon--caret link--block">this is a link to another page</a>
+          </div>
+          {% endfor %}
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+
+  <section class="region nieuws">
+    <div class='layout layout--wide'>
+      <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
+        <div class="col">
+          <h2 class="h3" id="nieuws">Laatste nieuws</h2>
+        </div>
+        <div class="col">
+          <a class="link--icon--caret strong" href="/nieuws">Bekijk alle nieuwsberichten</a>
+        </div>
+      </div>
+      <div class="grid grid--is-stacked u-spacer">
+        {% for post in site.posts %}
+        <div class="col--4-12 col--6-12--s col--1-1--xs">
+          <a href="{{ post.url | relative_url}}" class="spotlight">
+            <article>
+              <header class="spotlight__header">
+                <div class="spotlight__image spotlight__image--focus-center-center">
+                  <img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+                </div>
+                <div class="spotlight__title-wrapper">
+                  <h1 class="spotlight__title">{{ post.title | escape }}</h1>
+                </div>
+              </header>
+              <div class="spotlight__text-wrapper">
+                <div class="spotlight__text">
+                  {{ post.teaser | escape }}
+                </div>
+              </div>
+              <div class="category bullet-list bullet-list--tag">
+                <div class="bullet-list__item">{{ post.category }}</div>
+              </div>
+            </article>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class='layout layout--wide'>
+      <div class="grid grid--is-stacked">
+        <div class="col--1-1">
+          <!-- component -->
+          <div class="quote">
+            <div class="quote__image-wrapper">
+              <img class="quote__image" src="{{ site.baseurl }}/assets/img/quote/woman.png" alt="" />
+            </div>
+            <div class="quote__content">
+              <div class="quote__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid ducimus, earum eius fugiat ipsa ipsam maxime nam odio perferendis quia reiciendis reprehenderit rerum sed sequi sit soluta temporibus vel voluptatum.
+              </div>
+              <div class="quote__author">Jan Verpoort, zijn functie</div>
+              <div class="quote__reference">
+                <a class="link--icon--caret" href="#">Lees het verhaal</a>
+              </div>
+            </div>
+          </div>
+          <!-- end component -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="region tint initiatieven">
+    <div class='layout layout--wide'>
+      <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
+        <div class="col">
+          <h2 class="h3" id="initiatieven">Initiatieven</h2>
+        </div>
+        <div class="col">
+          <a class="link--icon--caret strong" href="/nieuws">Bekijk alle nieuwsberichten</a>
+        </div>
+      </div>
+      <div class="grid grid--is-stacked u-spacer">
+        {% for post in site.posts %}
+        <div class="col--3-12 col--4-12-md col--6-12--s col--1-1--xs">
+          <a href="{{ post.url | relative_url}}" class="spotlight">
+            <article>
+              <header class="spotlight__header">
+                <div class="spotlight__image spotlight__image--focus-center-center">
+                  <img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+                </div>
+                <div class="spotlight__title-wrapper">
+                  <h1 class="spotlight__title">{{ post.title | escape }}</h1>
+                </div>
+              </header>
+              <div class="spotlight__text-wrapper">
+                <div class="spotlight__text">
+                  {{ post.teaser | escape }}
+                </div>
+              </div>
+              <div class="category bullet-list">
+                <div class="bullet-list__item">{{ post.category }}</div>
+              </div>
+            </article>
+          </a>
+        </div>
+        {% endfor %}
+
+        <div class="col--4-12 col--6-12--m col--12-12--xs">
+          <a class="" href="#">
+            <div class="doormat__graphic-wrapper">
+              <img class="doormat__graphic" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-418/RW_componentenbib_demo_balk_bloesem001.jpg" alt="illustratie van een netwerk" />
+            </div>
+            <h2 class="doormat__title">{{ post.title | escape }}</h2>
+            <div class="doormat__text">
+              <div class="bullet-list bullet-list--tag">
+                <div class="bullet-list__item">
+                  {{ post.category }}
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class="kennishub">
+        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
+        <div class="layout layout--wide">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m">
+            <h2 class="h3">Wat kan de Open City Community voor mij betekenen</h2>
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+            <hr class="wave" />
+            <h3 class="h4">Vind het op onze kennishub</h3>
+            <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class="layout layout--wide">
+      <section class="info-block info-block--faq">
+        <header class="info-block__header">
+          <h1 class="info-block__title">Top veelgestelde vragen</h1>
+        </header>
+        <div class="info-block__content">
+          Dit is de inhoud voor de info-block lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque distinctio quis minima suscipit ipsa beatae aliquam facere. Dignissimos, hic eligendi facilis adipisci consequatur reprehenderit inventore numquam iusto! Magnam, alias, adipisci.
+        </div>
+      </section>
+    </div>
+  </section>
+
 </div>

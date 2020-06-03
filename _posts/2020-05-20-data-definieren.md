@@ -1,7 +1,8 @@
 ---
-title: Toekenning subsidie
+title: Hoe moet ik mijn data op de juiste manier definiëren
 layout: post
-category: Projectstart
+category: Category 3
+teaser: Dit is een teaser text voor mijn post
 ---
 De Vlaamse Regering besluit de toekenning van een projectsubsidie aan IMEC vzw voor de ontwikkeling van een Vlaamse Open City Architectuur.
 

@@ -1,0 +1,32 @@
+.spotlight {
+  padding: 0;
+  margin: 0;
+}
+
+.spotlight__header{
+  max-height: none;
+  margin: 0;
+
+  .spotlight__title-wrapper {
+    padding-left: 0;
+
+    &:before {
+      content:none;
+    }
+    .spotlight__title{
+      padding: 1rem 2rem;
+      display: inline-block;
+      max-width: 85%;
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.spotlight__text{
+  padding: 0 2rem 1rem 2rem;
+}
+
+.bullet-list--tag {
+  padding-left:2rem;
+}

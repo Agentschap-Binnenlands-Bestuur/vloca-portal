@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}" prefix="schema: http://schema.org/ 
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" prefix="schema: http://schema.org/
 dct: http://purl.org/dc/terms/
 cito: http://purl.org/spar/cito/
 og: http://ogp.me/ns#">
@@ -10,15 +10,14 @@ og: http://ogp.me/ns#">
 		<div class="page">
 
 			{% include header.html %}
+			{% include breadcrumbs.html %}
 
 			<div class="main-content" id="main" itemprop="mainContentOfPage" role="main" tabindex="-1">
-				<section class="region">
-					{{ content }}
-				</section>
+				{{ content }}
 			</div>
 
 		</div>
-		
+
 		{% include footer.html %}
 
 	</body>

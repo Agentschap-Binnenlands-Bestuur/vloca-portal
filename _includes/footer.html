@@ -1,11 +1,28 @@
-<div class="u-spacer--large">
-</div>
+<footer class="content-footer">
+  <div class="content-footer__wrapper">
+      <div class="layout layout--wide">
+          <div class="grid grid--is-stacked">
+						<ul class="grid grid--is-stacked js-equal-height-container">
+						{% assign mypages = site.pages | sort: "order" %}
+						{% for my_page in mypages %}
+								{% if my_page.title %}
+										<li class="col--6-12 col--12-12--xs">
+							        <a class="doormat js-equal-height" href="{{ my_page.url | relative_url }}">
+							          <h2 class="doormat__title" data-clamp="2">{{ my_page.title | escape }}</h2>
+							          <div class="doormat__text">
+													{{ my_page.teaser}}
+							          </div>
+							        </a>
+							      </li>
+								{% endif %}
+						{% endfor %}
+          </div>
+      </div>
+  </div>
+</footer>
 
-<p class="center-p footer-logos">
-<img src="{{ site.baseurl }}/assets/img/imec.svg" width="100"/><img src="{{ site.baseurl }}/assets/img/vito-logo.png" width="150"/>
-</p>
 <div id="vlaanderen-footer">
 	<!-- insert your Vlaanderen-footer-code here -->
-	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
+	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/de7a5cafba0c4a1794038a84ff879bce"></script>
 	<!-- End global footer-->
 </div>

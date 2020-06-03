@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Portaal Vlaamse Open City Architectuur
+title: Vlaamse Open City Architectuur
 email: stedenbeleid@vlaanderen.be
 description: > # this means to ignore newlines until "baseurl:"
    Co-creatie en kennisdelingsplatform voor de Vlaamse Open City Architectuur
@@ -46,6 +46,9 @@ collections:
   usecases:
     output: true
     permalink: /:collection/:path/
+  posts:
+    output: true
+    permalink: /nieuws/:title/
 
 defaults:
   - scope:

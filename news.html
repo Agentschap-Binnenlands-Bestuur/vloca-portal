@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Nieuws en opinies
-permalink: /news/
-order: 2
+title: Nieuws
+teaser: Lees hier de allerlaatste nieuws en blog berichten rond de Open City Architectuur
+permalink: /nieuws/
+order: 1
 ---
 <div class="page">
     <div id="main" itemprop="mainContentOfPage" role="main" tabindex="-1" class="main-content">
@@ -11,11 +12,13 @@ order: 2
                 <div class="grid">
                     <div class="col--4-6 col--1-1--s">
                         <div>
-                        <h1 class="h1">Nieuws en opinies</h1>
+                        <h1 class="h1">Nieuws</h1>
                             <section class="region">
                                 <ul class="post-list">
                                     {% for post in site.posts %}
                                         <li>
+                                          <!-- komt vanop de homepage -->
+                                          {{ post.date | date: "%d %b %y" }}
                                             <span class="post-meta">{% if post.author %}{{ post.author }} - {% endif %}{{ post.date | date: "%b %-d, %Y" }}</span>
                                             <h2 class="h2">
                                                 <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
@@ -27,8 +30,10 @@ order: 2
                             </section>
                         </div>
                     </div>
+
                     <div class="col--2-6 col--1-1--s">
                     </div>
+
                 </div>
             </div>
         </section>

@@ -1,41 +1,74 @@
-<header class="content-header" role="banner">
+
+<div class="region region--mobile-navigation layout layout--wide">
+  <div id="block-mobilenavigation" class="block block-webuniversum-blocks block-webuniversum-mobile-navigation">
+      <nav class="mobilemenu">
+				<button type="button" class="mobilemenu__toggle vi vi-arrow">
+				<span>Navigatie</span>
+				</button>
+				<div class="mobilemenu__wrapper">
+				<ul data-mobilemenu-depth="1">
+					<li class="mobilemenu__link active-trail">
+					  <a href="/brussel/brusselbrochure-bruzine" class="active-trail active">Brusselbrochure BRUZINE</a>
+					</li>
+				</ul>
+			</nav>
+  </div>
+</div>
+
+<header class="content-header content-header--alt content-header--large content-header--has-context" role="banner">
 	<div class="content-header__wrapper">
+		<div class="content-header__bg">
 		<picture>
-		<source media="(min-width: 1024px)" srcset="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1x">
-			<source media="(max-device-width: 767px)" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 1x">
-				<source media="(max-width: 1023px)" srcset="{{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1x">
-					<img alt="" src="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 320w, {{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1024w, {{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1600w" title="">
-		</picture>
+			<source media="(min-width: 1024px)" srcset="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1x">
+				<source media="(max-device-width: 767px)" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 1x">
+					<source media="(max-width: 1023px)" srcset="{{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1x">
+						<img alt="" src="{{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg" srcset="{{ site.baseurl }}/assets/img/page_banner_mobile_alt/header.jpg 320w, {{ site.baseurl }}/assets/img/page_banner_narrow/header.jpg 1024w, {{ site.baseurl }}/assets/img/page_banner_wide_alt/header.jpg 1600w" title="">
+			</picture>
+		</div>
 
 		<div class="layout layout--wide">
 			<div class="content-header__content">
-				<h1 class="content-header__title"><span class="content-header__title__content">Vlaamse Open City Architectuur</span>
-				</h1>
-			</div>
+        <div class="content-header__logo-wrapper">
+          <a href="{{ site.baseurl }}" class="content-header__entity-logo content-header__entity-logo--black">
+            <span class="content-header__entity-logo__title">Vlaamse Open City Architectuur</span>
+					</a>
+      	</div>
+				<!-- should be looked at
+
+      	<div class="content-header__context content-header__context--has-link">
+        	<a class="content-header__context__link" href="/brussel/subsidiegids-projecten-voor-brussel">Subsidiegids Projecten voor Brussel</a>
+        </div>
+
+        <div class="content-header__title content-header__title--has-link" itemprop="name">
+          <h1><a class="content-header__title__link" href="/brussel/subsidiegids-projecten-voor-brussel/aanvraag-en-behandeling">Aanvraag en behandeling</a></h1>
+        </div>
+
+				-- should be looked at -->
+      </div>
 		</div>
 	</div>
 </header>
-<div class="tabs__wrapper">
-  <ul class="tabs tabs--alt" data-tabs-list>
-      <li class="tab">
-        <a class="tab__link" href="{{ "/" | relative_url}}"><i class="fa fa-home" aria-hidden="true"></i></a>
-      </li>
-        {% assign mypages = site.pages | sort: "order" %}{% for my_page in mypages %}
-            {% if my_page.title %}
-                <li class="tab">
-                    <a class="tab__link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-                </li>
-            {% endif %}
-                {% endfor %}
-        {% if site.github_username %}
-            <li class="tab">
-                {% include icon-github.html username=site.github_username %}
-            </li>
-        {% endif %}
-        {% if site.twitter_username %}
-            <li class="tab">
-                {% include icon-twitter.html username='search?q=%23smartflanders' %}
-            </li>
-        {% endif %}
-  </ul>
+
+<div id="block-topnavigation" class="block block-webuniversum-blocks block-webuniversum-top-navigation">
+	<div class="top-navigation top-navigation--white">
+	  <div class="layout layout--wide">
+	    <div class="grid">
+	      <div class="col--9-12 col--9-12--m col--1-1--s">
+		      <nav role="navigation" class="top-navigation-wrapper">
+		        <div class="top-navigation__content">
+		          <ul class="top-navigation__group">
+								{% assign mypages = site.pages | sort: "order" %}
+								{% for my_page in mypages %}
+			            {% if my_page.title %}
+		                <li class="top-navigation__item">
+	                    <a href="{{ my_page.url | relative_url }}" class="active-trail active">{{ my_page.title | escape }}</a>
+		                </li>
+			            {% endif %}
+				        {% endfor %}
+		        </div>
+		      </nav>
+		    </div>
+		  </div>
+		</div>
+	</div>
 </div>
