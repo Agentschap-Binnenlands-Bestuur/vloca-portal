@@ -10,8 +10,17 @@
     }
   }
 
-  .content-split {
-    margin-bottom: -8rem;
+  .intro {
+    .grid > div:last-child{
+      margin-top: 4rem;
+    }
   }
+
+  .content-split {
+    @media only screen and (min-width: 767px) {
+      margin-bottom: -8rem;
+    }
+  }
+
 
 }

@@ -1,20 +1,10 @@
 .crosslink {
-  padding: 4rem;
+  padding: 6rem 4rem;
   background: $background-light;
   display: flex;
+  flex-flow: column wrap;
+  margin-bottom: 4rem;
   align-items: center;
-
-  &__icon {
-    width: 8rem;
-  }
-
-  &__text {
-
-  }
-
-  &__cta {
-    margin-left: auto;
-  }
 
   &.alt {
     background: $yellow;
@@ -23,5 +13,46 @@
       background: $white;
     }
   }
+
+  &__text {
+    margin: 0 0 2rem 0;
+  }
+
+  &__cta {
+    width: 100%;
+    a {
+      display: block;
+    }
+  }
+
+  @media only screen and (min-width: 440px) {
+    flex-flow: row wrap;
+    align-items: flex-start;
+
+    &__icon {
+      width: 8rem;
+    }
+    &__text {
+      width: calc( 100% - 8rem);
+    }
+    &__cta {
+      width: auto;
+      margin-left: 8rem;
+    }
+  }
+
+  @media only screen and (min-width: 767px) {
+    padding: 4rem;
+    align-items: center;
+    
+    &__text {
+      margin-top: 2rem;
+      width: calc( 100% - 30rem);
+    }
+    &__cta {
+      margin-left: auto;
+    }
+  }
+
 
 }

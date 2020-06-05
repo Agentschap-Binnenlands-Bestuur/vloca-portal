@@ -1,6 +1,9 @@
 .content-split {
   position: relative;
-  padding: 4rem 0 10rem;
+  padding: 4rem 0 2rem;
+  @media only screen and (min-width: 767px) {
+    padding-bottom: 10rem;
+  }
 
   &:before, content:after {
     width: 100%;
@@ -11,6 +14,7 @@
     left: 0;
     content: '';
   }
+
   .img {
     display: block;
     position: relative;
@@ -30,7 +34,11 @@
   }
 
   .content__wrapper {
-    padding: 8rem 2rem;
+    padding: 4rem 2rem;
+
+    @media only screen and (min-width: 767px){
+      padding: 8rem 2rem;
+    }
 
     hr {
       margin: 4rem 0;

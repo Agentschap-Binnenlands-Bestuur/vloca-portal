@@ -1,5 +1,11 @@
-header {
-  .content-header__title h1{
+header.content-header {
+  background: red;
+  picture {
+    height: 100%;
+    max-height: none;
+  }
+
+  &__title h1{
     margin: 0;
   }
 }

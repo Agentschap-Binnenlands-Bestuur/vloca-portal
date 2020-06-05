@@ -23,6 +23,10 @@ a {
   height: auto;
 }
 
+.content-header{
+  display: block;
+}
+
 section {
   &.tint {
     background: $background-light;
@@ -30,7 +34,10 @@ section {
 }
 
 .layout--normal {
-  @media only screen and (max-width:1023px){
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  @media only screen and (min-width:767px){
     padding-left: 4rem;
     padding-right: 4rem;
   }
