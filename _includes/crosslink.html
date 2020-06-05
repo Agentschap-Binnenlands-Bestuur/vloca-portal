@@ -1,0 +1,19 @@
+<section class="region{%if include.hide-mobile %} hide-desktop{% endif %}">
+
+  <div class="layout {{ include.class }}">
+    <div class="block crosslink alt">
+      <div class="crosslink__icon">
+        <div class="badge badge--accent badge--m badge--icon">
+          <i class="badge__icon" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="crosslink__text">
+        <h2 class="h4">{{include.title}}</h2>
+        <p>{{include.text}}</p>
+      </div>
+      <div class="crosslink__cta">
+        <a class="button button__primary" href="{{ include.url }}">{{ include.cta }}</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,28 +1,64 @@
-<footer class="content-footer">
-  <div class="content-footer__wrapper">
-      <div class="layout layout--wide">
-          <div class="grid grid--is-stacked">
-						<ul class="grid grid--is-stacked js-equal-height-container">
-						{% assign mypages = site.pages | sort: "order" %}
-						{% for my_page in mypages %}
-								{% if my_page.title %}
-										<li class="col--6-12 col--12-12--xs">
-							        <a class="doormat js-equal-height" href="{{ my_page.url | relative_url }}">
-							          <h2 class="doormat__title" data-clamp="2">{{ my_page.title | escape }}</h2>
-							          <div class="doormat__text">
-													{{ my_page.teaser}}
-							          </div>
-							        </a>
-							      </li>
-								{% endif %}
-						{% endfor %}
-          </div>
-      </div>
-  </div>
-</footer>
+<section class="region region--overlap">
+	<div class="layout layout--wide">
+		<div class="contact-block wide">
+			<div class="grid grid--is-stacked">
+				<div class="col--4-12 col--12-12--m">
+					<div class="info-block">
+						<header role="presentation" class="info-block__header">
+							<div class="badge badge--accent badge--m badge--icon">
+								<i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
+							</div>
+							<h2 class="info-block__title h4">Contact <!----></h2>
+						</header><!---->
+					</div>
+				</div>
+				<div class="col--7-12 push--1-12 col--12-12--m push--reset--m">
+					<div class="properties"><dl class="properties__list">
+						<dt class="properties__label">Telefoon</dt>
+						<dd class="properties__data">
+							<p>
+								<a href="tel:1700" class="link"><!---->Bel 1700<!----><!----></a>
+							</p>
+							<p>Bereikbaar elke werkdag tussen 9 en 19 uur</p></dd> <dt class="properties__label">
+								E-mail
+							</dt> <dd class="properties__data"><p><a href="https://www.vlaanderen.be/nl/vlaamse-overheid/contact/stuur-een-e-mail" class="link"><!---->
+								Stuur een e-mail
+								<!----><!----></a></p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<!---->
+			</div>
+		</div>
+	</div>
+</section>
 
-<div id="vlaanderen-footer">
-	<!-- insert your Vlaanderen-footer-code here -->
-	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/de7a5cafba0c4a1794038a84ff879bce"></script>
-	<!-- End global footer-->
-</div>
+<footer class="content-footer">
+	<div class="content-footer__wrapper">
+		<div class="layout layout--wide">
+			<div class="grid grid--is-stacked">
+				<ul class="grid grid--is-stacked js-equal-height-container">
+					{% assign mypages = site.pages | sort: "order" %}
+					{% for my_page in mypages %}
+					{% if my_page.title %}
+					<li class="col--6-12 col--12-12--xs">
+						<a class="doormat js-equal-height" href="{{ my_page.url | relative_url }}">
+							<h2 class="doormat__title" data-clamp="2">{{ my_page.title | escape }}</h2>
+							<div class="doormat__text">
+								{{ my_page.teaser}}
+							</div>
+						</a>
+					</li>
+					{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div id="vlaanderen-footer">
+		<!-- insert your Vlaanderen-footer-code here -->
+		<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/de7a5cafba0c4a1794038a84ff879bce"></script>
+		<!-- End global footer-->
+	</div>

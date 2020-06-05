@@ -3,8 +3,6 @@ layout: default
 teaser: Dit is de homepage-teaser
 is_front: true
 ---
-{% assign events = site.events | sort: 'startDate' | reverse %}
-{% capture nowunix %}{{'now' | date: '%y%m%d'}}{% endcapture %}
 
 <div class="home layout">
 
@@ -13,7 +11,7 @@ is_front: true
       <div class="grid grid--is-stacked">
         <div class="col--6-12 col--1-1--s">
           <h1 class="h1">VLOCA Portaal</h1>
-          <p class="intro">Welkom op ons VLOCA Portaal. Bouw mee aan diverse projecten en toepassingen voor slimme steden, gemeenten en regio’s in Vlaanderen.</p>
+          <p class="introduction">Welkom op ons VLOCA Portaal. Bouw mee aan diverse projecten en toepassingen voor slimme steden, gemeenten en regio’s in Vlaanderen.</p>
           <a class="button button__primary" href="#">Meer weten over VLOCA</a>
         </div>
         <div class="col--6-12 col--1-1--s">
@@ -45,7 +43,7 @@ is_front: true
           <h2 class="h3" id="nieuws">Laatste nieuws</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="/nieuws">Bekijk alle nieuwsberichten</a>
+          <a class="link--icon--caret strong" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
@@ -109,7 +107,7 @@ is_front: true
           <h2 class="h3" id="initiatieven">Initiatieven</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="/nieuws">Bekijk alle nieuwsberichten</a>
+          <a class="link--icon--caret strong" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
@@ -156,18 +154,37 @@ is_front: true
     </div>
   </section>
 
-  <section class="region">
-    <div class="kennishub">
+  <section class="region no-pad">
+    <div class="block content-split">
         <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
         <div class="layout layout--wide">
           <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m">
             <h2 class="h3">Wat kan de Open City Community voor mij betekenen</h2>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
-            <hr class="wave" />
+            <hr class="wave hr" />
             <h3 class="h4">Vind het op onze kennishub</h3>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
           </div>
         </div>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class="layout layout--normal">
+      <div class="block crosslink alt shadow">
+        <div class="crosslink__icon">
+          <div class="badge badge--accent badge--m badge--icon">
+            <i class="badge__icon" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="crosslink__text">
+          <h2 class="h4">Meer weten over de Kennishub?</h2>
+          <p>Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!</p>
+        </div>
+        <div class="crosslink__cta">
+          <a class="button button__primary" href="#">Meer weten over VLOCA</a>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -181,6 +198,28 @@ is_front: true
           Dit is de inhoud voor de info-block lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque distinctio quis minima suscipit ipsa beatae aliquam facere. Dignissimos, hic eligendi facilis adipisci consequatur reprehenderit inventore numquam iusto! Magnam, alias, adipisci.
         </div>
       </section>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class="layout layout--wide">
+      <div class="grid">
+        <div class="col--8-12 col--12-12--s">
+          <div class="video-player">
+           <video class="js-video-player" poster="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.jpg?v1" controls crossorigin>
+             <!-- Video files -->
+             <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" type="video/mp4">
+             <source src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.webm" type="video/webm">
+
+             <!-- Text track file -->
+             <track kind="captions" label="English" srclang="en" src="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.en.vtt" default>
+
+             <!-- Fallback for browsers that don't support the <video> element -->
+             <a href="https://cdn.selz.com/plyr/1.5/View_From_A_Blue_Moon_Trailer-HD.mp4" download>Download</a>
+             </video>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

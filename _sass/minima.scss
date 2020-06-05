@@ -16,8 +16,12 @@ $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark:  darken($grey-color, 25%) !default;
 
+
+// Vloca colours
 $white:            #FFF;
+$background-normal:#E8EBEE;
 $background-light: #F7F9FC;
+$border-color:     #CBD2DA;
 $yellow:           #FFE615;
 
 // Width of the content area
@@ -54,7 +58,10 @@ $on-laptop:        800px !default;
   "vloca-2020/news",
   "vloca-2020/direct-to",
   "vloca-2020/spotlight",
+  "vloca-2020/content-split",
+  "vloca-2020/crosslink",
   "vloca-2020/quote",
+  "vloca-2020/contact-block",
   "vloca-2020/homepage",
   "vloca-2020/footer"
 ;
