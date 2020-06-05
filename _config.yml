@@ -40,6 +40,8 @@ collections:
   posts:
     output: true
     permalink: /nieuws/:title/
+  directs:
+    output: false
 
 defaults:
   - scope:

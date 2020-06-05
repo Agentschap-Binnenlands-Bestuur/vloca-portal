@@ -2,12 +2,25 @@
 
   .region{
     &.initiatieven {
-      padding-top: 16rem !important;
+      padding-top: 4rem !important;
+
+      @media only screen and (min-width: 767px) {
+        padding-top: 16rem !important;
+      }
+    }
+  }
+
+  .intro {
+    .grid > div:last-child{
+      margin-top: 4rem;
     }
   }
 
   .content-split {
-    margin-bottom: -8rem;
+    @media only screen and (min-width: 767px) {
+      margin-bottom: -8rem;
+    }
   }
+
 
 }

@@ -1,17 +1,27 @@
 .quote {
   overflow: visible;
   //background: linear-gradient(-110deg,transparent 90%,#ffe615 90%);
+  margin-top: 4rem;
 
   &:before{
     content: "";
     background-color: $yellow;
     display: block;
     position: absolute;
-    left: 0;
-    top: -4rem;
-    bottom: -10rem;
+    top: -2rem;
     right: 0;
-    transform: translateX(calc(-100% + 100px)) skewX(15deg);
+    height: 14rem;
+    left: 0;
+    transform: translateX(-50%) skewX(15deg);
+    @media only screen and (min-width: 767px){
+      content: "";
+      background-color: $yellow;
+      display: block;
+      position: absolute;
+      height: auto;
+      bottom: -10rem;
+      transform: translateX(calc(-100% + 100px)) skewX(15deg);
+    }
   }
 
 
@@ -30,5 +40,9 @@
   &:before {
     background: -webkit-linear-gradient(200deg,transparent 20px,$white 20px);
     background: linear-gradient(-110deg,transparent 20px,$white 20px)
+  }
+  @media only screen and  (max-width: 766px){
+    float: none;
+    margin: 0 auto 4rem auto;
   }
 }

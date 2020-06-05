@@ -6,9 +6,9 @@ is_front: true
 
 <div class="home layout">
 
-  <section class="region">
+  <section class="region intro">
     <div class='layout layout--wide'>
-      <div class="grid grid--is-stacked">
+      <div class="grid">
         <div class="col--6-12 col--1-1--s">
           <h1 class="h1">VLOCA Portaal</h1>
           <p class="introduction">Welkom op ons VLOCA Portaal. Bouw mee aan diverse projecten en toepassingen voor slimme steden, gemeenten en regio’s in Vlaanderen.</p>
@@ -25,10 +25,14 @@ is_front: true
     <div class='layout layout--wide'>
       <div class="direct-to wide">
         <label>Direct naar</label>
-        <div class="grid grid--is-stacked">
-          {% for post in site.posts %}
+        <div class="grid">
+          {% for direct in site.directs %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
-              <a href="" class="link--icon--caret link--block">this is a link to another page</a>
+            {% if direct.external %}
+              <a href="{{ direct.link | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ direct.link }}" class="link--icon--caret link--block">{{ direct.title }}</a>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
@@ -43,7 +47,7 @@ is_front: true
           <h2 class="h3" id="nieuws">Laatste nieuws</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
+          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
@@ -72,6 +76,7 @@ is_front: true
         </div>
         {% endfor %}
       </div>
+      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
     </div>
   </section>
 
@@ -106,12 +111,12 @@ is_front: true
           <h2 class="h3" id="initiatieven">Initiatieven</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
+          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
         {% for post in site.posts %}
-        <div class="col--3-12 col--4-12-md col--6-12--s col--1-1--xs">
+        <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
           <a href="{{ post.url | relative_url}}" class="spotlight yellow">
             <article>
               <header class="spotlight__header">
@@ -135,6 +140,7 @@ is_front: true
         </div>
         {% endfor %}
       </div>
+      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
     </div>
   </section>
 
@@ -142,7 +148,7 @@ is_front: true
     <div class="block content-split">
         <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
         <div class="layout layout--wide">
-          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
             <h2 class="h3">Wat kan de Open City Community voor mij betekenen</h2>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             <hr class="wave hr" />
