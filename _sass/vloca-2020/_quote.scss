@@ -1,0 +1,34 @@
+.quote {
+  overflow: visible;
+  //background: linear-gradient(-110deg,transparent 90%,#ffe615 90%);
+
+  &:before{
+    content: "";
+    background-color: $yellow;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    bottom: -10rem;
+    right: 0;
+    transform: translateX(calc(-100% + 100px)) skewX(15deg);
+  }
+
+
+  .dark:after {
+    background-color: grey;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -4rem;
+    bottom: -10rem;
+    right: 0;
+  }
+}
+
+.quote__image-wrapper {
+  &:before {
+    background: -webkit-linear-gradient(200deg,transparent 20px,$white 20px);
+    background: linear-gradient(-110deg,transparent 20px,$white 20px)
+  }
+}

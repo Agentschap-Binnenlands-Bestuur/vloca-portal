@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<style>
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+</style>
+
+<div class="layout layout--wide">
+	<div class="grid">
+		<div class="col--4-6 col--1-1--s">
+			<div class="js-scrollspy__content">
+				<h1 class="h1" id="about">Initiatieven</h1>
+				<section>
+					<ul class="bullet-list bullet-list--tag">
+						{% for usecase in paginator.initiatieven %}
+						<li class="bullet-list__item">
+							<a href="{{ site.baseurl }}/{{ usecase.url }}">{{ usecase.title }}</a>: {{ usecase.tagline }}
+						</li>
+						{% endfor %}
+					</ul>
+
+					<!--
+				    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+				  -->
+				  {% if paginator.total_pages > 1 %}
+				  <ul class="pager">
+				      {% if paginator.previous_page %}
+				      <li class="previous">
+				          <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+				      </li>
+				      {% endif %}
+				      {% if paginator.next_page %}
+				      <li class="next">
+				          <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+				      </li>
+				      {% endif %}
+				  </ul>
+				  {% endif %}
+
+				</section>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,47 @@
+.contact-block {
+  border: 1px solid $border-color;
+  padding: 4rem;
+  background: $white;
+
+  .info-block {
+    margin: 0;
+
+    .info-block__header{
+      display: flex;
+      align-items: center;
+      padding: 0;
+
+      &:before,
+      &:after {
+        content: none;
+      }
+    }
+  }
+
+  .badge {
+    margin-right: 2rem;
+  }
+
+  .properties {
+    margin-bottom: 0;
+    background: transparent;
+    padding: 0;
+  }
+
+  .properties__label,
+  .properties__data {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 3.2rem;
+
+    &:last-of-type{
+      padding-bottom: 0;
+    }
+
+    p {
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+}

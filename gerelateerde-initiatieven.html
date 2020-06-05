@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Gerelateerde initiatieven
+teaser: Dit is de teaser van gerelateerde initiatieven
 permalink: /gerelateerde-initiatieven/
 published: true
 order: 5
@@ -11,7 +12,7 @@ order: 5
             <div class="layout layout--wide">
                 <div class="grid">
                     <div class="col--4-6 col--1-1--s">
-                        {% for initiative in site.initiatives %}
+                        {% for initiative in site.initiatieven %}
                             {% if initiative.website %}<a href="//{{ initiative.website }}" target="_blank">{% endif %}
                                 <h5 class="title--alt">{{ initiative.title }}</h5>
                             {% if initiative.website %}</a>{% endif %}

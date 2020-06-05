@@ -1,0 +1,27 @@
+.crosslink {
+  padding: 4rem;
+  background: $background-light;
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 8rem;
+  }
+
+  &__text {
+
+  }
+
+  &__cta {
+    margin-left: auto;
+  }
+
+  &.alt {
+    background: $yellow;
+
+    .badge {
+      background: $white;
+    }
+  }
+
+}
