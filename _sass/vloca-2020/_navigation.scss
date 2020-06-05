@@ -1,6 +1,13 @@
+.block-webuniversum-top-navigation{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 .top-navigation {
   border-top: 1px solid #cbd2da;
   border-bottom: 1px solid #cbd2da;
+
 
   .top-navigation__group {
     margin-left: -1.2rem;
