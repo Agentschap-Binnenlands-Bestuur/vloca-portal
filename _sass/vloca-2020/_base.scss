@@ -42,6 +42,14 @@ section {
   }
 }
 
+.bullet-list .bullet-list__item {
+  padding-left: 2.4rem;
+  color: $color-label;
+  &:before{
+    color:$border-color;
+  }
+}
+
 .no-pad {
   padding: 0;
 }

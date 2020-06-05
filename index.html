@@ -25,10 +25,14 @@ is_front: true
     <div class='layout layout--wide'>
       <div class="direct-to wide">
         <label>Direct naar</label>
-        <div class="grid grid--is-stacked">
-          {% for post in site.posts %}
+        <div class="grid">
+          {% for direct in site.directs %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
-              <a href="" class="link--icon--caret link--block">this is a link to another page</a>
+            {% if direct.external %}
+              <a href="{{ direct.link | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ direct.link }}" class="link--icon--caret link--block">{{ direct.title }}</a>
+            {% endif %}
           </div>
           {% endfor %}
         </div>
@@ -111,7 +115,7 @@ is_front: true
       </div>
       <div class="grid grid--is-stacked u-spacer">
         {% for post in site.posts %}
-        <div class="col--3-12 col--4-12-md col--6-12--s col--1-1--xs">
+        <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
           <a href="{{ post.url | relative_url}}" class="spotlight yellow">
             <article>
               <header class="spotlight__header">

@@ -4,8 +4,12 @@
 
   label {
     font-weight: 500;
-    margin-bottom: 1.6rem;
+    font-size: 2rem;
     display: block;
+  }
+
+  .grid > div {
+    margin-top: 1.6rem;
   }
 
 }

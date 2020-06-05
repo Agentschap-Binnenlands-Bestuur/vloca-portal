@@ -5,12 +5,12 @@ teaser: Dit is de initiatieven-teaser
 permalink: /initiatieven/
 order: 2
 ---
-<div class="layout layout--wide">
+<div class="layout layout--wide initiatieven">
 	<div class="js-scrollspy__content">
 		<h1 class="h1" id="initiatieven">Initiatieven</h1>
 		<div class="grid grid--is-stacked u-spacer">
       {% for post in site.posts %}
-      <div class="col--3-12 col--4-12-md col--6-12--s col--1-1--xs">
+      <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
         <a href="{{ post.url | relative_url}}" class="spotlight yellow">
           <article>
             <header class="spotlight__header">
