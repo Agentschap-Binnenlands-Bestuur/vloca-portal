@@ -2,7 +2,11 @@
 
   .region{
     &.initiatieven {
-      padding-top: 16rem !important;
+      padding-top: 4rem !important;
+
+      @media only screen and (min-width: 767px) {
+        padding-top: 16rem !important;
+      }
     }
   }
 

@@ -1,8 +1,27 @@
-.h1 {
+.introduction {
+  font-size: 2rem;
+  line-height: 3.8rem;
   margin-bottom: 3.8rem;
 }
 
-.introduction {
-  line-height: 3.8rem;
-  margin-bottom: 3.8rem;
+@media only screen and (min-width: 579px){
+  .h1 {
+    margin-bottom: 3.8rem;
+  }
+
+  .introduction {
+    line-height: 3.8rem;
+    margin-bottom: 3.8rem;
+  }
+}
+
+@media only screen and (min-width: 579px){
+  .h1 {
+    margin-bottom: 3.8rem;
+  }
+
+  .introduction {
+    line-height: 3.8rem;
+    margin-bottom: 3.8rem;
+  }
 }

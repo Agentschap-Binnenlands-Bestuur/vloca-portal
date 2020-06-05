@@ -47,7 +47,7 @@ is_front: true
           <h2 class="h3" id="nieuws">Laatste nieuws</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
+          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
@@ -76,6 +76,7 @@ is_front: true
         </div>
         {% endfor %}
       </div>
+      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
     </div>
   </section>
 
@@ -110,7 +111,7 @@ is_front: true
           <h2 class="h3" id="initiatieven">Initiatieven</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
+          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
@@ -139,6 +140,7 @@ is_front: true
         </div>
         {% endfor %}
       </div>
+      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
     </div>
   </section>
 
@@ -146,7 +148,7 @@ is_front: true
     <div class="block content-split">
         <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
         <div class="layout layout--wide">
-          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--reset--m">
             <h2 class="h3">Wat kan de Open City Community voor mij betekenen</h2>
             <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas faucibus mollis interdum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
             <hr class="wave hr" />
