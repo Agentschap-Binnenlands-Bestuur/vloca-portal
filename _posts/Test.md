@@ -7,6 +7,7 @@ languages:
 ---
 ![VLOCA visual kick-off](/assets/VLOCA visual kick-off.jpg)
 
+TEST!!!
 Het Agentschap Binnenlands Bestuur en de onderzoekscentra imec en VITO nodigen je uit om deel te nemen aan het online infomoment over [de Vlaamse Open City Architectuur (VLOCA)](https://smart.flanders.be/vloca.html). Dat vindt plaats op **woensdag 17 juni 2020 van 10.00 tot 12.00 uur**.  
 
 <p align="center">
