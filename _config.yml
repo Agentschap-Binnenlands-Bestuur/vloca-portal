@@ -34,9 +34,10 @@ exclude:
 
 # Collections
 collections:
-  initiatieven:
+  initiatives:
     output: true
     permalink: /initiatieven/:title/
+    bodyclass: "initiative"
   posts:
     output: true
     permalink: /nieuws/:title/
@@ -48,3 +49,8 @@ defaults:
       path: "assets/img"
     values:
       image: true
+  - scope:
+      type: "initiatives"
+    values:
+      layout: initiative
+      bodyclass: "initiative"

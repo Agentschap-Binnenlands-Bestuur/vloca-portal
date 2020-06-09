@@ -5,11 +5,19 @@
     }
 }
 
+/*
+.block-webuniversum-fullbreadcrumb {
+  position: sticky;
+  top: 94px;
+  background: $white;
+}
+*/
+
 .custom-breadcrumb {
   padding: 5px 0;
   border-bottom: 1px solid #cbd2da;
   margin-bottom: 48px;
-  margin-bottom: 3rem;
+  margin-bottom: 0rem;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;

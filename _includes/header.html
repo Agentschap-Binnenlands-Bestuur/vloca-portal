@@ -11,23 +11,26 @@
 
 		<div class="layout layout--wide">
 			<div class="content-header__content">
+
+        {% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
         <div class="content-header__logo-wrapper">
           <a href="{{ site.baseurl }}/" class="content-header__entity-logo content-header__entity-logo--black">
             <span class="content-header__entity-logo__title">Vlaamse Open City Architectuur</span>
 					</a>
       	</div>
+        {% for crumb in crumbs offset: 1 %}
 
-				<!-- should be looked at
+          {% if forloop.index0 ==  0 %}
+        	<div class="content-header__context content-header__context--has-link">
+          	<a class="content-header__context__link" href="{{ site.baseurl }}/{% assign crumb_limit = forloop.index | plus: 1 %}{% for crumb in crumbs limit: crumb_limit %}{{ crumb | append: '/' | replace:'without-plugin/','without-plugins/' }}{% endfor %}">{{ crumb | replace:'-',' ' | remove:'.html' | capitalize }}</a>
+          </div>
+          {% elsif forloop.last %}
+          <div class="content-header__title content-header__title--has-link" itemprop="name">
+            <h1 class="content-header__title__link" href="#">{{ page.title }}</h1>
+          </div>
+          {% endif %}
 
-      	<div class="content-header__context content-header__context--has-link">
-        	<a class="content-header__context__link" href="/brussel/subsidiegids-projecten-voor-brussel">Subsidiegids Projecten voor Brussel</a>
-        </div>
-
-        <div class="content-header__title content-header__title--has-link" itemprop="name">
-          <h1><a class="content-header__title__link" href="/brussel/subsidiegids-projecten-voor-brussel/aanvraag-en-behandeling">Aanvraag en behandeling</a></h1>
-        </div>
-
-				-- should be looked at -->
+        {% endfor %}
 
       </div>
 		</div>
