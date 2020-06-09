@@ -3,13 +3,11 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="region intro">
-    <div class="layout layout--wide">
-      <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></div>
-    </div>
     <div class="layout layout--condensed">
     	<div class="grid">
 
         <div class="content__wrapper col--1-1">
+          <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d/%m/%Y" }}</time></div>
           <div class="headings">
           	<h1 class="h1">{{page.title | escape}}</h1>
           </div>
