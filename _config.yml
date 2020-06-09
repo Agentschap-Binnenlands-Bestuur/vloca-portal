@@ -17,7 +17,7 @@ title: Vlaamse Open City Architectuur
 email: stedenbeleid@vlaanderen.be
 description: > # this means to ignore newlines until "baseurl:"
    Co-creatie en kennisdelingsplatform voor de Vlaamse Open City Architectuur
-baseurl: "/vloca" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://url-strategie.binnenlandsbestuur.vlaanderen" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 twitter_username: vl_stedenbeleid
