@@ -1,6 +1,27 @@
-.nieuws {
+.news {
     .spotlight.spotlight--link:before,
     a.spotlight:before {
       background-color: $yellow;
+    }
+
+    .post-meta {
+      position: absolute;
+      font-size: 2.4rem;
+      font-weight: 500;
+      color: $text-color;
+      line-height: 6rem;
+    }
+
+
+    &.page {
+      .region.intro {
+        padding-bottom: 0;
+      }
+      h1{
+        margin-bottom: 1rem;
+      }
+      .introduction {
+        margin-top: 5rem;
+      }
     }
 }
