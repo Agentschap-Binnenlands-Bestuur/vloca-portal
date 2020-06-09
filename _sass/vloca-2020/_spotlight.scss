@@ -1,8 +1,8 @@
 .spotlight {
-  $v: &;
 
   padding: 0;
-  margin: 0;
+  margin-bottom: 2.4rem;
+
   &:hover {
     text-decoration: none;
   }
@@ -16,9 +16,60 @@
     }
   }
 
-  .bullet-list__item:before {
-    font-size: 1.7rem;
+
+  .bullet-list__item {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    @media only screen and (min-width: 767px){
+      font-size: 1.6rem;
+      padding-left: 2.4rem;
+    }
+    &:before {
+      font-size: 1.4rem;
+      @media only screen and (min-width: 767px){
+        font-size: 1.7rem;
+      }
+    }
   }
+
+  .bullet-list--location {
+    font-weight: 500;
+  }
+
+  &.highlight {
+    .spotlight__image{
+      height: 100%;
+      @media only screen and (min-width: 500px){
+        min-height: 280px;
+      }
+      @media only screen and (min-width: 767px){
+        min-height: 350px;
+      }
+      @media only screen and (min-width: 1024px){
+        min-height: 530px;
+      }
+    }
+
+    content{
+      padding: 3rem;
+    }
+
+    @media only screen and (min-width: 767px){
+      .spotlight__title {
+        font-size: 3.4rem;
+      }
+
+      .spotlight__text {
+        font-size: 1.8rem;
+        line-height: 3.2rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 767px) {
+    margin-bottom: 0;
+  }
+
 }
 
 .spotlight__header{
@@ -28,6 +79,7 @@
 
 .spotlight__text {
   line-height: 2.8rem;
+  margin-bottom: 1.6rem;
 }
 
 // Nieuws spotlight
@@ -39,28 +91,30 @@
     &:before {
       content:none;
     }
+
     .spotlight__title{
       padding: 1rem 2rem;
       display: inline-block;
       max-width: 85%;
       margin-bottom: 0;
     }
-
   }
 
-
   .spotlight__text{
-    padding: 0 2rem 1rem 2rem;
+    padding: 0 2rem;
+    margin-bottom: 1rem;
+    @media only screen and (min-width: 767px){
+      padding: 0 2rem 1rem 2rem;
+    }
   }
 
   .bullet-list--tag {
     padding-left:2rem;
   }
-
 }
 
 // Initiatieven spotlight
-.initiatieven .spotlight {
+.initiatives .spotlight {
 
   .spotlight__image {
     padding-top: 25rem;

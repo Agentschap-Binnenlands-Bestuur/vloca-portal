@@ -3,7 +3,6 @@ layout: default
 teaser: Dit is de homepage-teaser
 is_front: true
 ---
-
 <div class="home layout">
 
   <section class="region intro">
@@ -28,10 +27,10 @@ is_front: true
         <div class="grid">
           {% for direct in site.directs %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
-            {% if direct.external %}
-              <a href="{{ direct.link | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
+            {% if direct.exturl %}
+              <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
             {% else %}
-              <a href="{{ site.baseurl }}{{ direct.link }}" class="link--icon--caret link--block">{{ direct.title }}</a>
+              <a href="{{ site.baseurl }}{{ direct.inturl }}" class="link--icon--caret link--block">{{ direct.title }}</a>
             {% endif %}
           </div>
           {% endfor %}
@@ -84,7 +83,7 @@ is_front: true
     <div class='layout layout--wide'>
       <div class="grid grid--is-stacked">
         <div class="col--1-1">
-          <!-- component -->
+
           <div class="quote">
             <div class="quote__image-wrapper">
               <img class="quote__image" src="{{ site.baseurl }}/assets/img/quote/woman.png" alt="" />
@@ -98,49 +97,83 @@ is_front: true
               </div>
             </div>
           </div>
-          <!-- end component -->
+
         </div>
       </div>
     </div>
   </section>
 
-  <section class="region tint initiatieven">
+  <section class="region tint initiatives">
     <div class='layout layout--wide'>
       <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
         <div class="col">
           <h2 class="h3" id="initiatieven">Initiatieven</h2>
         </div>
         <div class="col">
-          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
+          <a class="link--icon--caret strong show-tablet show-desktop" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% for post in site.posts %}
-        <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
-          <a href="{{ post.url | relative_url}}" class="spotlight yellow">
-            <article>
-              <header class="spotlight__header">
-                <div class="spotlight__image spotlight__image--focus-center-center">
-                  <img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
-                </div>
-                <div class="spotlight__title-wrapper">
-                  <h1 class="spotlight__title">{{ post.title | escape }}</h1>
-                </div>
-              </header>
-              <div class="spotlight__text-wrapper">
-                <div class="spotlight__text">
-                  {{ post.teaser | escape }}
-                </div>
-              </div>
-              <div class="category bullet-list bullet-list--tag">
-                <div class="bullet-list__item">{{ post.category }}</div>
-              </div>
-            </article>
-          </a>
-        </div>
+        {% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
+        {% for initiative in sorted %}
+          {% if forloop.index0 == 0 %}
+            <div class="col--1-1">
+              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow highlight shadow">
+                <article class="grid">
+                  <header class="spotlight__header col--9-12 col--8-12--m col--6-12--s col--1-1--xs">
+                    <div class="spotlight__image spotlight__image--focus-center-center">
+                      <img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
+                    </div>
+                  </header>
+                  <content class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+                    <div class="spotlight__title-wrapper">
+                      <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
+                    </div>
+                    <div class="spotlight__text-wrapper">
+                      <div class="spotlight__text">
+                        {{ initiative.teaser | escape }}
+                      </div>
+                    </div>
+                    <div class="category bullet-list bullet-list--location">
+                      <div class="bullet-list__item">{{ initiative.location | join: ", " }}</div>
+                    </div>
+                    <div class="category bullet-list bullet-list--tag">
+                      <div class="bullet-list__item">{{ initiative.tags | join: ", " }}</div>
+                    </div>
+                  </content>
+                </article>
+              </a>
+            </div>
+          {% else %}
+            <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow">
+                <article>
+                  <header class="spotlight__header">
+                    <div class="spotlight__image spotlight__image--focus-center-center">
+                      <img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+                    </div>
+                    <div class="spotlight__title-wrapper">
+                      <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
+                    </div>
+                  </header>
+                  <div class="spotlight__text-wrapper">
+                    <div class="spotlight__text">
+                      {{ initiative.teaser | escape }}
+                    </div>
+                  </div>
+                  <div class="category bullet-list bullet-list--location">
+                    <div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
+                  </div>
+                  <div class="category bullet-list bullet-list--tag">
+                    <div class="bullet-list__item">{{ initiative.tags | join: ", "}}</div>
+                  </div>
+                </article>
+              </a>
+            </div>
+          {% endif %}
         {% endfor %}
       </div>
-      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
+      <a class="link--icon--caret strong show-mobile" href="{{ site.baseurl }}/initiatieven">Bekijk alle initiatieven</a>
     </div>
   </section>
 
@@ -159,24 +192,7 @@ is_front: true
     </div>
   </section>
 
-  <section class="region">
-    <div class="layout layout--normal">
-      <div class="block crosslink alt shadow">
-        <div class="crosslink__icon">
-          <div class="badge badge--accent badge--m badge--icon">
-            <i class="badge__icon" aria-hidden="true"></i>
-          </div>
-        </div>
-        <div class="crosslink__text">
-          <h2 class="h4">Meer weten over de Kennishub?</h2>
-          <p>Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!</p>
-        </div>
-        <div class="crosslink__cta">
-          <a class="button button__primary" href="#">Meer weten over VLOCA</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  {% include crosslink.html layout-class='layout--normal' block-class='alt shadow'  url="/kennishub/" cta="Naar de kennishub" title="Meer weten over de Kennishub? Mobile" text="Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!" icon="kennishub" %}
 
   <section class="region">
     <div class="layout layout--wide">
@@ -185,7 +201,45 @@ is_front: true
           <h1 class="info-block__title">Top veelgestelde vragen</h1>
         </header>
         <div class="info-block__content">
-          Dit is de inhoud voor de info-block lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque distinctio quis minima suscipit ipsa beatae aliquam facere. Dignissimos, hic eligendi facilis adipisci consequatur reprehenderit inventore numquam iusto! Magnam, alias, adipisci.
+
+          <div class="layout layout--wide">
+            <div class="grid">
+
+              <div class="col--6-12">
+                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="wat">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</a>
+              </div>
+              <div class="col--6-12">
+                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="abc">Toon andere inhoud in kleine drawer consectetur adipisicing elit. Ratione ipsum illum, nihil sit labore necessitatibus! Tempora nisi esse ipsam unde aspernatur hic voluptatum ducimus placeat voluptatem nobis quae.</a>
+              </div>
+
+              <div class="drawer drawer--small js-drawer--small" data-drawer="456" tabindex="-1">
+
+                <a href="" class="link--icon--close drawer__close js-drawer__close">
+                  <span class="u-visually-hidden">Venster sluiten</span>
+                </a>
+
+                <div class="layout layout--wide">
+
+                  <div class="drawer__content" data-drawer-content="wat">
+                    <h1 class="h3">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</h1>
+                    <div class="typography">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit enim et aut ipsa aperiam optio at sint natus alias dolorem commodi distinctio minus eaque nostrum quaerat perspiciatis culpa, obcaecati quibusdam repellat esse? Facere consequuntur, omnis iure esse, non hic a accusantium neque voluptatem explicabo possimus cum quaerat cupiditate aperiam quasi doloremque facilis itaque nesciunt minus, dolor recusandae harum inventore! Aperiam eligendi architecto fuga saepe mollitia placeat voluptatibus rem, iusto rerum in nihil, officia, quia debitis. Molestias consequuntur dolore, rem quisquam dicta nisi laborum, recusandae nihil quae impedit dolores saepe tenetur distinctio natus repellendus magnam ducimus possimus. Velit, distinctio maiores.</p>
+                    </div>
+                  </div>
+
+                  <div class="drawer__content" data-drawer-content="abc">
+                    <h1 class="h3">Inhoud van de andere drawer</h1>
+                    <div class="typography">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nesciunt debitis perferendis voluptatem corporis quod totam quibusdam aut mollitia quo autem, at earum unde molestias esse cum, voluptatum, odio sit.</p>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, facere quisquam sint architecto omnis. Quasi omnis dignissimos recusandae corrupti reiciendis. Minima officia dolores recusandae atque beatae aspernatur est repellat magni vero explicabo dignissimos voluptatum odit a dolor vitae, repellendus. Ducimus dolore eos obcaecati quia optio, minima ratione molestias, saepe distinctio inventore ipsa ea delectus, illo fugiat commodi tenetur. Dolores excepturi quae animi alias a debitis molestias officiis totam magnam nesciunt optio, magni, maxime. Vero nesciunt consectetur vel libero exercitationem deleniti! Voluptates perspiciatis ea incidunt, maiores, temporibus nemo fugiat adipisci molestiae eveniet facilis placeat facere id natus, qui nulla cupiditate voluptatum!</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </div>

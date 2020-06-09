@@ -13,6 +13,7 @@
     height: 14rem;
     left: 0;
     transform: translateX(-50%) skewX(15deg);
+
     @media only screen and (min-width: 767px){
       content: "";
       background-color: $yellow;
@@ -24,7 +25,6 @@
     }
   }
 
-
   .dark:after {
     background-color: grey;
     display: block;
@@ -34,6 +34,7 @@
     bottom: -10rem;
     right: 0;
   }
+
 }
 
 .quote__image-wrapper {

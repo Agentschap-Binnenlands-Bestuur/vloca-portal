@@ -1,10 +1,10 @@
-<section class="region{%if include.hide-mobile %} hide-desktop{% endif %}">
+<section class="region">
 
-  <div class="layout {{ include.class }}">
-    <div class="block crosslink alt">
+  <div class="layout {{ include.layout-class }}">
+    <div class="block crosslink {{ include.block-class }}">
       <div class="crosslink__icon">
-        <div class="badge badge--accent badge--m badge--icon">
-          <i class="badge__icon" aria-hidden="true"></i>
+        <div class="badge badge--accent badge--l badge--icon">
+          <i class="badge__icon vi vi-{{ include.icon }}" aria-hidden="true"></i>
         </div>
       </div>
       <div class="crosslink__text">
@@ -12,8 +12,9 @@
         <p>{{include.text}}</p>
       </div>
       <div class="crosslink__cta">
-        <a class="button button__primary" href="{{ include.url }}">{{ include.cta }}</a>
+        <a class="button button__primary" href="{{site.baseurl}}/{{ include.url }}">{{ include.cta }}</a>
       </div>
     </div>
   </div>
+
 </section>
