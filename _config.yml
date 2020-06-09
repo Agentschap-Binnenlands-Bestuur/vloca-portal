@@ -54,3 +54,8 @@ defaults:
     values:
       layout: initiative
       bodyclass: "initiative"
+  - scope:
+      type: "posts"
+    values:
+      layout: post
+      bodyclass: "news"
