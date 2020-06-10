@@ -25,7 +25,8 @@ is_front: true
       <div class="direct-to wide">
         <label>Direct naar</label>
         <div class="grid">
-          {% for direct in site.directs %}
+          {% assign directs = site.directs | where:'type', 'home' %}
+          {% for direct in directs %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
             {% if direct.exturl %}
               <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
@@ -192,9 +193,10 @@ is_front: true
     </div>
   </section>
 
-  {% include crosslink.html layout-class='layout--normal' block-class='alt shadow'  url="/kennishub/" cta="Naar de kennishub" title="Meer weten over de Kennishub? Mobile" text="Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!" icon="kennishub" %}
+  {% include crosslink.html layout-class='normal' block-class='alt shadow'  url="/kennishub/" cta="Naar de kennishub" title="Meer weten over de Kennishub? Mobile" text="Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!" icon="kennishub" %}
 
   <section class="region">
+
     <div class="layout layout--wide">
       <section class="info-block info-block--faq">
         <header class="info-block__header">
@@ -242,6 +244,7 @@ is_front: true
 
         </div>
       </section>
+
     </div>
   </section>
 

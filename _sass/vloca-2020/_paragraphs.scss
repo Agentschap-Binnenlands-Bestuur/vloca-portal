@@ -16,7 +16,11 @@
 }
 
 .paragraph {
-  padding: 5rem 0;
+  padding: 2rem 0;
+
+  @media only screen and (min-width: 767px) {
+    padding: 5rem 0;
+  }
 
   .paragraph__title{
     padding-bottom: 2.4rem;
@@ -42,7 +46,10 @@
   }
 
   &.paragraph__quote {
-    margin: 5rem 0;
+    margin: 2rem 0;
+    @media only screen and (min-width: 767px){
+      margin: 5rem 0;
+    }
     padding: 0;
     background-color: $background-light;
 

@@ -94,6 +94,16 @@ highlight: 1
   </div>
 </div>
 
+<div class='layout layout--wide'>
+  <div class="grid">
+    <div class="col--1-1">
+      {% capture alert-text %}<p>this is a text with a <a href='{{site.baseurl}}'>link</a> in it.</p>{% endcapture %}
+      {% include alert.html type="warning" title="Stay safe" text=alert-text %}
+    </div>
+  </div>
+</div>
+
+
 <div class="paragraph paragraph__text-with-image right">
   <div class='layout layout--normal'>
     <div class="grid grid--is-stacked row">
@@ -273,7 +283,9 @@ highlight: 1
   </div>
 </div>
 
-{% include crosslink.html layout-class="layout--wide" block-class=" shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
+<div class="paragraph">
+{% include crosslink.html layout-class="wide" block-class=" shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
+</div>
 
 <div class="paragraph paragraph__logos">
   <div class='layout layout--normal'>
@@ -325,13 +337,13 @@ highlight: 1
       <div class="col--1-1">
         <h2 class="h2">Gerelateerde Kennishub pagina's</h2>
         <ul class="link-list">
-          <li><a class="link--icon--external" href="#">This is a link in a list</a></li>
-          <li><a class="link--icon--external" href="#">This is a link in a list</a></li>
-          <li><a class="link--icon--external" href="#">This is a link in a list</a></li>
-          <li><a class="link--icon--external" href="#">This is a link in a list</a></li>
+          <li><a class="link--icon--external" href="#">Mattis Venenatis</a></li>
+          <li><a class="link--icon--external" href="#">Mollis Tellus Nibh Malesuada</a></li>
+          <li><a class="link--icon--external" href="#">Purus Nullam</a></li>
+          <li><a class="link--icon--external" href="#">Magna Sollicitudin Inceptos</a></li>
         </ul>
       </div>
 
     </div>
   </div>
-</div>
+</section>

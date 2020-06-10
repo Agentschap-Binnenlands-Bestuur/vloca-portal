@@ -23,7 +23,7 @@
     background: $background-light;
     background-size: cover;
     background-position: center center;
-    left: 0;
+
     top: 0;
 
     @media only screen and (min-width:767px){
@@ -44,6 +44,18 @@
       margin: 4rem 0;
     }
 
+  }
+
+  &.image-left {
+    .img{
+      @media only screen and (min-width:767px){
+        left: calc(50% + 2rem);
+      }
+    }
+
+    .content-wrapper {
+      padding-left: 0;
+    }
   }
 
 }
