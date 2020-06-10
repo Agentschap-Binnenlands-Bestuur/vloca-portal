@@ -7,8 +7,11 @@
 }
 
 p {
-    font-family: flanders-sans,sans-serif;
-    line-height: 3.2rem;
+  font-family: flanders-sans,sans-serif;
+  line-height: 3.2rem;
+  &:not(:last-child){
+    margin-bottom: 1.6rem;
+  }
 }
 
 a {
@@ -99,16 +102,16 @@ section {
   padding: 4rem;
 }
 .pad--top {
-  padding-top: 4rem;
+  padding-top: 4rem !important;
 }
 .pad--left {
-  padding-left: 4rem;
+  padding-left: 4rem !important;
 }
 .pad--right {
-  padding-right: 4rem;
+  padding-right: 4rem !important;
 }
 .pad--bottom {
-  padding-bottom: 4rem;
+  padding-bottom: 4rem !important;
 }
 
 .overview-header {
@@ -140,6 +143,10 @@ section {
 .region--overlap {
     background: linear-gradient(180deg,#FFFFFF calc(50% - 30px),#f7f9fc calc(50% - 30px),#f7f9fc);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00000000",endColorstr="#000000",GradientType=0)
+}
+
+.background-light {
+  background-color: $background-light;
 }
 
 .shadow {

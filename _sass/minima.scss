@@ -19,12 +19,13 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 
 // Vloca colours
 $color-label:      #696969;
-
 $white:            #FFF;
 $background-normal:#E8EBEE;
 $background-light: #F7F9FC;
 $border-color:     #CBD2DA;
 $yellow:           #FFE615;
+$blue:             #06c;
+$blue-light:       #3184d6;
 
 // Width of the content area
 $content-width:    800px !default;
@@ -58,6 +59,7 @@ $on-laptop:        800px !default;
   "vloca-2020/header",
   "vloca-2020/breadcrumb",
   "vloca-2020/navigation",
+  "vloca-2020/page",
   "vloca-2020/news",
   "vloca-2020/initiatives",
   "vloca-2020/direct-to",
@@ -65,7 +67,9 @@ $on-laptop:        800px !default;
   "vloca-2020/content-split",
   "vloca-2020/crosslink",
   "vloca-2020/quote",
+  "vloca-2020/card",
   "vloca-2020/contact-block",
+  "vloca-2020/share",
   "vloca-2020/homepage",
   "vloca-2020/paragraphs",
   "vloca-2020/footer"

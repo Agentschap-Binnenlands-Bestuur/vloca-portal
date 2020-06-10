@@ -1,0 +1,46 @@
+.card {
+  position: relative;
+  padding: 6rem;
+  background: $white;
+  height: 100%;
+  display: flex;
+  flex-flow: column;
+
+  &__image{
+    margin-bottom: 6rem;
+  }
+
+  &__header{
+
+  }
+
+  &__content {
+
+  }
+
+  &__social-wrapper {
+
+    margin-top: auto;
+
+    .share-buttons {
+      margin-top: 4rem;
+      padding-top: 4rem;
+      text-align: center;
+    }
+
+    .share-button {
+      padding: 0;
+      margin: 0 1rem;
+    }
+
+    .share-button:before {
+      color: $blue;
+      font-size: 2.5rem;
+    }
+
+    .share-button:hover:before {
+      color: $blue-light;
+    }
+  }
+
+}
