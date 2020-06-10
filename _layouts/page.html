@@ -11,9 +11,11 @@ layout: default
           	<h1 class="h1">{{page.title | escape}}</h1>
           </div>
 
+          {% if page.intro %}
           <div class="introduction">
             <p>{{page.intro}}</p>
           </div>
+          {% endif %}
     		</div>
 
     	</div>

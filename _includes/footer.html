@@ -38,7 +38,9 @@
 	<div class="content-footer__wrapper">
 		<div class="layout layout--wide">
 				<ul class="grid grid--is-stacked js-equal-height-container">
-					{% for nav in site.data.navigation %}
+
+					{% assign navigation = site.data.navigation | sort: 'order' %}
+          {% for nav in navigation %}
 						<li class="col--6-12 col--12-12--xs">
 							<a class="doormat js-equal-height" href="{{ nav.permalink | relative_url }}">
 								<h2 class="doormat__title" data-clamp="2">{{ nav.title | escape }}</h2>
@@ -48,6 +50,7 @@
 							</a>
 						</li>
 					{% endfor %}
+					
 					</ul>
 			</div>
 		</div>
