@@ -6,9 +6,11 @@
 			</button>
 			<div class="mobilemenu__wrapper">
   			<ul data-mobilemenu-depth="1">
-          <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}/nieuws" class="active-trail {% if page.url contains '/nieuws'%}active{% endif %}">Nieuws</a></li>
-          <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}/initiatieven" class="active-trail {% if page.url contains '/initiatieven'%}active{% endif %}">Initiatieven</a></li>
-          <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}/over-vloca" class="active-trail {% if page.url contains '/over-vloca'%}active{% endif %}">Over VLOCA</a></li>
+
+          {% for nav in site.data.navigation %}
+            <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}{{ nav.permalink }}" class="active-trail {% if page.url contains {{nav.permalink}} %}active{% endif %}">{{ nav.title | escape }}</a></li>
+          {% endfor %}
+
   			</ul>
       </div>
 		</nav>

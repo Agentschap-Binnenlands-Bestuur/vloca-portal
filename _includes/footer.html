@@ -38,18 +38,15 @@
 	<div class="content-footer__wrapper">
 		<div class="layout layout--wide">
 				<ul class="grid grid--is-stacked js-equal-height-container">
-					{% assign mypages = site.pages | sort: "order" %}
-					{% for my_page in mypages %}
-					{% if my_page.title %}
-					<li class="col--6-12 col--12-12--xs">
-						<a class="doormat js-equal-height" href="{{ my_page.url | relative_url }}">
-							<h2 class="doormat__title" data-clamp="2">{{ my_page.title | escape }}</h2>
-							<div class="doormat__text">
-								{{ my_page.teaser}}
-							</div>
-						</a>
-					</li>
-					{% endif %}
+					{% for nav in site.data.navigation %}
+						<li class="col--6-12 col--12-12--xs">
+							<a class="doormat js-equal-height" href="{{ nav.permalink | relative_url }}">
+								<h2 class="doormat__title" data-clamp="2">{{ nav.title | escape }}</h2>
+								<div class="doormat__text">
+									{{ nav.teaser }}
+								</div>
+							</a>
+						</li>
 					{% endfor %}
 					</ul>
 			</div>
