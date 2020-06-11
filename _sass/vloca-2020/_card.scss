@@ -1,6 +1,6 @@
 .card {
   position: relative;
-  padding: 6rem;
+  padding: 4rem;
   background: $white;
   height: 100%;
   display: flex;
@@ -41,6 +41,10 @@
     .share-button:hover:before {
       color: $blue-light;
     }
+  }
+
+  @media only screen and (min-width: 767px) {
+    padding: 6rem;
   }
 
 }

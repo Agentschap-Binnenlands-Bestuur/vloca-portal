@@ -1,7 +1,8 @@
-.block-webuniversum-top-navigation{
-    position: sticky;
-    top: 44px;
-    z-index: 999;
+.block-webuniversum-top-navigation {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 44px;
+  z-index: 999;
 }
 
 .top-navigation {
@@ -186,6 +187,11 @@ button.mobilemenu__toggle {
 
 @media screen and (max-width: 767px) {
     .block-webuniversum-top-navigation,.block-local-tasks {
-        display:none;
+      display:none;
+    }
+
+    .content-header:not(.content-header--show-mobile) .content-header__context {
+      margin-bottom: .5rem;
+      padding: .3rem 2rem .4rem 0;
     }
 }
