@@ -1,7 +1,7 @@
 ---
 title: Ambtelijke stuurgroep 01
 layout: post
-category: Category 1
+category: stuurgroep
 teaser: Dit is een teaser text voor mijn post
 ---
 De ambtelijke stuurgroep kwam voor de eerste keer - virtueel - samen.

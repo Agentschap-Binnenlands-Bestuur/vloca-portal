@@ -3,7 +3,7 @@
   padding: 0;
   margin-bottom: 2.4rem;
 
-  &:hover {
+  a:hover {
     text-decoration: none;
   }
 
@@ -14,6 +14,23 @@
     &:before {
       background-color: $yellow;
     }
+  }
+
+  article > a:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  article .bullet-list__item a {
+    position: relative;
+    z-index: 2;
   }
 
 

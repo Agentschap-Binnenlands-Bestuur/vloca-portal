@@ -1,7 +1,7 @@
 ---
 title: Startvergadering VLOCA
 layout: post
-category:  Category 2
+category:  startup
 teaser: Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod.
 ---
 IMEC, VITO en ABB hebben het project afgetrapt.
