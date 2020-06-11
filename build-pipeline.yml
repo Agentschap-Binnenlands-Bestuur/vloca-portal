@@ -4,7 +4,8 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/ruby
 
 trigger:
-- smartflanders-clone
+- test
+
 
 pool:
   vmImage: 'ubuntu-latest'
