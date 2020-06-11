@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}" prefix="schema: http://schema.org/
+dct: http://purl.org/dc/terms/
+cito: http://purl.org/spar/cito/
+og: http://ogp.me/ns#">
+
+	{% include head.html %}
+
+	<body translate="no">
+		<div class="page {{page.bodyclass}}">
+
+			{% include mobile-navigation.html %}
+			{% include header.html %}
+			{% include breadcrumbs.html %}
+
+			<div class="main-content" id="main" itemprop="mainContentOfPage" role="main" tabindex="-1">
+				{{ content }}
+			</div>
+
+		</div>
+
+	<script src="https://use.fontawesome.com/415c4aae00.js"></script>
+	<script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
+	<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+  <script src="{{site.baseurl}}/assets/js/vloca.js?is=lkj"></script>
+	</body>
+
+</html>

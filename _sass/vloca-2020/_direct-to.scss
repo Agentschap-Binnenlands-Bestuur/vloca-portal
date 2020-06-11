@@ -1,0 +1,15 @@
+.direct-to {
+  background: $background-light;
+  padding: 4rem;
+
+  label {
+    font-weight: 500;
+    font-size: 2rem;
+    display: block;
+  }
+
+  .grid > div {
+    margin-top: 1.6rem;
+  }
+
+}

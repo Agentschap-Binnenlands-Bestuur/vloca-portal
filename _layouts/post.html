@@ -1,0 +1,30 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="region intro">
+    <div class="layout layout--condensed">
+    	<div class="grid">
+
+        <div class="content__wrapper col--1-1">
+          <div class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%-d/%m/%Y" }}</time></div>
+          <div class="headings">
+          	<h1 class="h1">{{page.title | escape}}</h1>
+          </div>
+
+          <div class="category bullet-list bullet-list--tag">
+            <div class="bullet-list__item">{{ page.category | join: ", "}}</div>
+          </div>
+
+          <div class="introduction">
+            <p>{{page.intro}}</p>
+          </div>
+    		</div>
+
+    	</div>
+    </div>
+  </header>
+  <section class="region paragraphs">
+    {{ content }}
+  </section>
+</article>

@@ -1,0 +1,27 @@
+---
+layout: default
+---
+<article class="page">
+  <header class="region intro">
+    <div class="layout layout--wide">
+    	<div class="grid">
+
+        <div class="content__wrapper col--1-1">
+          <div class="headings">
+          	<h1 class="h1">{{page.title | escape}}</h1>
+          </div>
+
+          {% if page.intro %}
+          <div class="introduction">
+            <p>{{page.intro}}</p>
+          </div>
+          {% endif %}
+    		</div>
+
+    	</div>
+    </div>
+  </header>
+  <section class="region paragraphs">
+    {{ content }}
+  </section>
+</article>

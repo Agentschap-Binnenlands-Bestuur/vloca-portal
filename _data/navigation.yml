@@ -1,0 +1,19 @@
+- title: Nieuws
+  teaser: Lees hier de allerlaatste nieuws en blog berichten rond de Open City Architectuur
+  permalink: /nieuws/
+  order: 1
+
+- title: Initiatieven
+  teaser: Dit is de initiatieven-teaser
+  permalink: /initiatieven/
+  order: 2
+
+- title: Over VLOCA
+  teaser: Dit is de about-teaser
+  permalink: /over-vloca/
+  order: 3
+
+- title: Contacteer ons
+  teaser: Achter deze link zit de contactpagina
+  permalink: /contact/
+  order: 4
