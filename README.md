@@ -8,6 +8,6 @@ Three branches are significant:
 * master: deploys to https://www.vlaanderen.be/vloca
 ## Build the site
 Download the repository.
-Install jekyll.
-Run `jekyll build` in the repository root.
-Serve the files in `/_site` on a webserver or use `jekyll s` and browse to https://localhost:4000 (unless you've changed that).
+* Install jekyll.
+* Run `jekyll build` in the repository root.
+* Serve the files in `/_site` on a webserver or use `jekyll s` and browse to https://localhost:4000 (unless you've changed that).
