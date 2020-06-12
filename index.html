@@ -52,7 +52,7 @@ is_front: true
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% for post in site.posts %}
+        {% for post in site.posts limit : 6 %}
         <div class="col--4-12 col--6-12--s col--1-1--xs">
           <a href="{{ post.url | relative_url}}" class="spotlight yellow">
             <article>
@@ -117,7 +117,7 @@ is_front: true
       </div>
       <div class="grid grid--is-stacked u-spacer">
         {% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
-        {% for initiative in sorted %}
+        {% for initiative in sorted limit : 5 %}
           {% if forloop.index0 == 0 %}
             <div class="col--1-1">
               <a href="{{ initiative.url | relative_url}}" class="spotlight yellow highlight shadow">
