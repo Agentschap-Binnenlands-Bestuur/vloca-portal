@@ -41,6 +41,9 @@ collections:
   posts:
     output: true
     permalink: /nieuws/:title/
+  faqs:
+    output: true;
+    permalink: /veelgestelde-vragen/:title
   directs:
     output: false
 
