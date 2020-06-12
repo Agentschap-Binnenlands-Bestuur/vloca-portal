@@ -3,6 +3,7 @@ title: Ambtelijke stuurgroep 01
 layout: post
 category: Category 1
 teaser: Dit is een teaser text voor mijn post
+thumb: "assets/img/nieuws/thumbs/wires.png"
 ---
 De ambtelijke stuurgroep kwam voor de eerste keer - virtueel - samen.
 

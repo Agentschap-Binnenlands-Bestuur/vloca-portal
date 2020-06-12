@@ -189,17 +189,19 @@ button.mobilemenu__toggle {
     }
 }
 
-@media screen and (min-width: 578px) {
+@media screen and (max-width: 578px) {
   body > .page {
     padding-top: 87px;
   }
 }
 
-@media screen and (max-width: 767px) {
-
+@media screen and (min-width: 579px) and (max-width: 766px) {
   body > .page {
     padding-top: 43px;
   }
+}
+
+@media screen and (max-width: 767px) {
 
   .iwgh2-bar {
     position: fixed !important;
