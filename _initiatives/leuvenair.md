@@ -4,7 +4,8 @@ tags: [citizen science, air quality]
 location: [Antwerp]
 exturl: https://leuvenair.be/
 tagline: "Samen luchtkwaliteit meten in Leuven"
-img: "assets/img/use_cases/leuvenair.webp"
+img: "assets/img/initiatives/large/dencity.png"
+thumb: "assets/img/initiatives/thumbs/dencity.png"
 teaser: "Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit."
 ---
 Leuvenair.be is een burgerinitatief om de Leuvense luchtkwaliteit in kaart te brengen
