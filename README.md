@@ -21,7 +21,7 @@ Installing Ruby and Jekyll becomes very easy using WSL!
 * Install your favourite distro from the Microsoft Store.
   * If you don't know your favourite distro, choose Ubuntu: https://www.microsoft.com/store/productId/9NBLGGH4MSV6 , more info at https://wiki.ubuntu.com/WSL. Follow the steps at your first run.
 * Install git and ruby-bundler.
-  *  In Ubuntu: `sudo apt-get install git ruby-bundler`
+  *  In Ubuntu: `sudo apt-get install git build-essential bundler`
 * Next clone the repository from WSL.
   * `git clone https://github.com/Agentschap-Binnenlands-Bestuur/vloca-portal.git`
 * Install ruby requirements:
