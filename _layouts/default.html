@@ -22,11 +22,28 @@ og: http://ogp.me/ns#">
 
 		{% include footer.html %}
 
-	<script src="https://use.fontawesome.com/415c4aae00.js"></script>
-	<script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
-	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
-	<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <script src="{{site.baseurl}}/assets/js/vloca.js?is=lkj"></script>
+		<script src="https://use.fontawesome.com/415c4aae00.js"></script>
+		<script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+		<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
+		<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		{% if page.is_front %}
+		<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/tiny-slider.css">
+		<script src="{{ site.baseurl }}/assets/js/tiny-slider.js"></script>
+		<script type="module">
+		var slider = tns({
+											container: '.tiny-slider',
+											items: 1,
+											autoplay: true,
+											speed: 500,
+											nav: false,
+											controls: false,
+											autoplayButton: false,
+											autoplayButtonOutput: false
+										});
+	  </script>
+		{% endif %}
+	  <script src="{{site.baseurl}}/assets/js/vloca.js?is=lkj"></script>
+
 	</body>
 
 </html>
