@@ -4,6 +4,8 @@ category: Category 3
 teaser: Dit is een teaser text voor mijn post
 thumb: "assets/img/nieuws/thumbs/wires.png"
 intro: 'Dit is de intro voor dit nieuwsbericht'
+og-image: "assets/img/nieuws/large/og-image.jpg"
+og-description: "Bekijk hoe jij jouw data moet definiëren"
 ---
 <div class="paragraph paragraph__full-image">
   <div class='layout layout--wide'>
@@ -231,6 +233,19 @@ intro: 'Dit is de intro voor dit nieuwsbericht'
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="social">
+  <div class='layout layout--normal'>
+    <div class="share-buttons">
+      Deel:
+      <a class="share-button share-button--facebook" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u={{ page.url | absolute_url | url_encode }}&t={{ page.title | escape }}" title="share on facebook">Deel op facebook</a>
+      <a class="share-button share-button--twitter" target="_blank" href="https://twitter.com/intent/tweet?text={{ page.title | escape }}+{{ page.url | absolute_url | url_encode }}" title="share on twitter">Deel op twitter</a>
+      <a class="share-button share-button--linkedin" target="_blank" href="https://www.linkedin.com/shareArticle?url={{ page.url | absolute_url | url_encode }}" title="share on linkedin">Deel op linkedin</a>
+      <a class="share-button share-button--mail" href="mailto:someone@yoursite.com?subject={{ page.title | escape }}&body={{ page.url | absolute_url | url_encode }}" title="share in mail">Deel via mail</a>
     </div>
   </div>
 </div>

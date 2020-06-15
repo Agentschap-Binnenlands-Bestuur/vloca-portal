@@ -1,7 +1,7 @@
 .share-button {
 
-  &, &:hover {
-    background: none;
+  &, &:hover, &:active, &:focus {
+    background: none !important;
   }
   &:before {
     color: $text-color;
@@ -31,5 +31,20 @@
 
   &.share-button--instagram:hover:before {
     background-image: url($baseurl + '/assets/img/icons/icon_instagram--blue-light.svg');
+  }
+}
+
+
+.social {
+  .share-buttons {
+    border-top: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+  }
+  .share-button {
+    &:before {
+      color: $blue;
+    }
   }
 }
