@@ -13,7 +13,11 @@ layout: default
           </div>
 
           <div class="category bullet-list bullet-list--tag">
-            <div class="bullet-list__item"><a href="{{site.baseurl}}/nieuws/{{page.category}}">{{ page.category | join : ", " | capitalize }}</a></div>
+            <div class="bullet-list__item">
+              {% for category in page.categories %}
+                <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+              {% endfor %}
+            </div>
           </div>
 
           <div class="introduction">

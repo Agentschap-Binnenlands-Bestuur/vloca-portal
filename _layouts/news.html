@@ -7,7 +7,7 @@ layout: default
     <div class="layout layout--wide">
       <h1 class="h1">Nieuws</h1>
       <div class="grid grid--is-stacked u-spacer">
-        
+
         {% for post in paginator.posts %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
             <div class="spotlight yellow spotlight--link">
@@ -31,7 +31,6 @@ layout: default
                   <div class="bullet-list__item">
                   {% for category in post.categories %}
                     <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
-
                   {% endfor %}
                   </div>
                 </div>
@@ -60,12 +59,12 @@ layout: default
         <ul class="pager">
             {% if paginator.previous_page %}
             <li class="previous">
-                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+                <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; vorige</a>
             </li>
             {% endif %}
             {% if paginator.next_page %}
             <li class="next">
-                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+                <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">volgende &rarr;</a>
             </li>
             {% endif %}
         </ul>

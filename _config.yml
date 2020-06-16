@@ -42,7 +42,7 @@ collections:
     bodyclass: "initiative"
   posts:
     output: true
-    permalink: /nieuws/:categories/:title/
+    permalink: /nieuws/:title/
   directs:
     output: false
 
@@ -51,7 +51,7 @@ pagination:
   enabled: true
   per_page: 2
   permalink: '/page/:num/'
-  title: ' - page :num'
+  title: 'Pagina :num'
   limit: 0
   sort_field: 'date'
   sort_reverse: true
