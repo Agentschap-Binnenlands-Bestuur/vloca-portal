@@ -3,11 +3,6 @@
   permalink: /nieuws/
   order: 1
 
-- title: Initiatieven
-  teaser: Dit is de initiatieven-teaser
-  permalink: /initiatieven/
-  order: 2
-
 - title: Over VLOCA
   teaser: Dit is de about-teaser
   permalink: /over-vloca/
