@@ -15,7 +15,13 @@ is_front: true
           <a class="button button__primary" href="#">Meer weten over VLOCA</a>
         </div>
         <div class="col--6-12 col--1-1--s">
-          <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
+          <a data-fancybox href="#myVideo">
+            <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
+            <video width="640" height="360" controls id="myVideo" style="display:none;">
+              <source src="{{ site.baseurl }}/assets/video/example.mp4" type="video/mp4">
+              Your browser doesn't support HTML5 video tag.
+          </video>
+          </a>
         </div>
       </div>
     </div>
