@@ -1,0 +1,39 @@
+---
+layout: default
+title: Veelgestelde vragen
+permalink: /veelgestelde-vragen/
+bodyclass: faq
+---
+<div class="news layout">
+  <section class="region">
+
+    <div class="layout layout--wide">
+      <h1 class="h1">Veelgestelde vragen</h1>
+      <div class="faq top">
+        <h2 class="h2">Onze top meestgestelde vragen</h2>
+        {% assign top-faqs = site.faqs | where:'top', 'true' %}
+        {% for faq in top-faqs %}
+          {{ faq }}
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div class="layout layout--wide">
+    <div class="faq all">
+      <h2 class="h2">Bekijk alle veelgestelde vragen</h2>
+      {% assign groups = site.faqs | group_by: "categories" | sort: "name" %}
+
+      {% for group in groups %}
+      <section class="pad--bottom faq__category">
+        <h3 class="h3">{{ group.name | slugify }}</h3>
+        {% for item in group.items %}
+            {{item}}
+        {%endfor%}
+      </div>
+      {%endfor%}
+
+    </div>
+  </div>
+
+</div>
