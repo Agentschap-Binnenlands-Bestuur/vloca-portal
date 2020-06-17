@@ -57,8 +57,9 @@ og-descrition: "Welcome to the homepage of VLOCA"
       <div class="grid grid--is-stacked u-spacer">
         {% for post in site.posts limit : 6 %}
         <div class="col--4-12 col--6-12--s col--1-1--xs">
-          <a href="{{ post.url | relative_url}}" class="spotlight yellow">
+          <div class="spotlight yellow spotlight--link">
             <article>
+              <a href="{{ post.url | relative_url}}" >
               <header class="spotlight__header">
                 <div class="spotlight__image spotlight__image--focus-center-center">
                   <img class="spotlight__image__img" src="{{ post.thumb | relative_url}}" alt="">
@@ -72,11 +73,16 @@ og-descrition: "Welcome to the homepage of VLOCA"
                   {{ post.teaser | escape }}
                 </div>
               </div>
+              </a>
               <div class="category bullet-list bullet-list--tag">
-                <div class="bullet-list__item">{{ post.category }}</div>
+                <div class="bullet-list__item">
+                {% for category in post.categories %}
+                  <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                {% endfor %}
+                </div>
               </div>
             </article>
-          </a>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -122,15 +128,18 @@ og-descrition: "Welcome to the homepage of VLOCA"
         {% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
         {% for initiative in sorted limit : 5 %}
           {% if forloop.index0 == 0 %}
-            <div class="col--1-1">
-              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow highlight shadow">
-                <article class="grid">
-                  <header class="spotlight__header col--9-12 col--8-12--m col--6-12--s col--1-1--xs">
+          <div class="col--1-1">
+            <div class="spotlight yellow highlight shadow spotlight--link">
+              <article class="grid">
+                <header class="spotlight__header col--9-12 col--8-12--m col--6-12--s col--1-1--xs">
+                  <a href="{{ initiative.url | relative_url}}">
                     <div class="spotlight__image spotlight__image--focus-center-center">
                       <img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
                     </div>
-                  </header>
-                  <content class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+                  </a>
+                </header>
+                <content class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+                  <a href="{{ initiative.url | relative_url}}">
                     <div class="spotlight__title-wrapper">
                       <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
                     </div>
@@ -142,39 +151,51 @@ og-descrition: "Welcome to the homepage of VLOCA"
                     <div class="category bullet-list bullet-list--location">
                       <div class="bullet-list__item">{{ initiative.location | join: ", " }}</div>
                     </div>
-                    <div class="category bullet-list bullet-list--tag">
-                      <div class="bullet-list__item">{{ initiative.tags | join: ", " }}</div>
-                    </div>
-                  </content>
-                </article>
-              </a>
-            </div>
-          {% else %}
-            <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
-              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow">
-                <article>
-                  <header class="spotlight__header">
-                    <div class="spotlight__image spotlight__image--focus-center-center">
-                      <img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
-                    </div>
-                    <div class="spotlight__title-wrapper">
-                      <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
-                    </div>
-                  </header>
-                  <div class="spotlight__text-wrapper">
-                    <div class="spotlight__text">
-                      {{ initiative.teaser | escape }}
-                    </div>
-                  </div>
-                  <div class="category bullet-list bullet-list--location">
-                    <div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
-                  </div>
+                  </a>
                   <div class="category bullet-list bullet-list--tag">
-                    <div class="bullet-list__item">{{ initiative.tags | join: ", "}}</div>
+                    <div class="bullet-list__item">
+                      {% for tag in initiative.tags %}
+                        <a class="" href="{{site.baseurl}}/initiatieven/{{ tag | replace: ' ', '-' }}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                      {% endfor %}
+                    </div>
                   </div>
-                </article>
-              </a>
+                </content>
+              </article>
             </div>
+          </div>
+          {% else %}
+          <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+            <div class="spotlight yellow spotlight--link">
+    					<article>
+                <a href="{{ initiative.url | relative_url}}">
+    							<header class="spotlight__header">
+    								<div class="spotlight__image spotlight__image--focus-center-center">
+    									<img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+    								</div>
+    								<div class="spotlight__title-wrapper">
+    									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
+    								</div>
+    							</header>
+    							<div class="spotlight__text-wrapper">
+    								<div class="spotlight__text">
+    									{{ initiative.teaser | escape }}
+    								</div>
+    							</div>
+      					</a>
+                <div class="category bullet-list bullet-list--location">
+                  <div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
+                </div>
+                <div class="category bullet-list bullet-list--tag">
+                  <div class="bullet-list__item">
+                    {% for tag in initiative.tags %}
+                      <a class="" href="{{site.baseurl}}/initiatieven/{{ tag | replace: ' ', '-' }}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+    					</article>
+            </div>
+  				</div>
+
           {% endif %}
         {% endfor %}
       </div>

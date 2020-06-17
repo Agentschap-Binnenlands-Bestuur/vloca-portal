@@ -28,6 +28,8 @@ github_username: Agentschap-Binnenlands-Bestuur
 markdown: kramdown
 plugins:
   - jekyll-feed
+gems:
+  - jekyll-paginate-v2
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -46,6 +48,16 @@ collections:
     permalink: /veelgestelde-vragen/:title
   directs:
     output: false
+
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 2
+  permalink: '/page/:num/'
+  title: 'Pagina :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
 
 defaults:
   - scope:

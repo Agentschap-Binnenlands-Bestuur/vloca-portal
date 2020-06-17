@@ -37,7 +37,7 @@
 <footer class="content-footer">
 	<div class="content-footer__wrapper">
 		<div class="layout layout--wide">
-				<ul class="grid grid--is-stacked js-equal-height-container">
+				<ul class="grid grid--is-stacked">
 
 					{% assign navigation = site.data.navigation | sort: 'order' %}
           {% for nav in navigation %}
@@ -50,7 +50,7 @@
 							</a>
 						</li>
 					{% endfor %}
-					
+
 					</ul>
 			</div>
 		</div>
