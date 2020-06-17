@@ -16,7 +16,8 @@
     }
   }
 
-  article > a:before {
+  article > a:before,
+  article content > a:before {
     content: '';
     display: block;
     position: absolute;
@@ -51,6 +52,16 @@
 
   .bullet-list--location {
     font-weight: 500;
+  }
+
+  .bullet-list--tag {
+    a {
+      color: $color-label;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &.highlight {
@@ -128,6 +139,7 @@
   .bullet-list--tag {
     padding-left:2rem;
   }
+
 }
 
 // Initiatieven spotlight

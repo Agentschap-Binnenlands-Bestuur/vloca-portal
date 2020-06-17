@@ -6,6 +6,22 @@ layout: default
 
     <div class="layout layout--wide">
       <h1 class="h1">Nieuws</h1>
+
+      <div class="grid grid--is-stacked u-spacer">
+        <div class="col col--1-12--xl col--2-12--l col--1-1--s">
+        Filteren op:
+        </div>
+        <div class="col col--11-12--xl col--10-12--l col--1-1--s">
+        {%
+          include
+          pill-navigation.html
+          collection="posts"
+          map="categories"
+          url="nieuws"
+        %}
+        </div>
+      </div>
+
       <div class="grid grid--is-stacked u-spacer">
 
         {% for post in paginator.posts %}
@@ -30,7 +46,8 @@ layout: default
                 <div class="category bullet-list bullet-list--tag">
                   <div class="bullet-list__item">
                   {% for category in post.categories %}
-                    <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                    {% assign category-path = category | replace: ' ', '-' %}
+                    <a href="{{site.baseurl}}/nieuws/{{category-path}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
                   {% endfor %}
                   </div>
                 </div>
@@ -39,11 +56,11 @@ layout: default
           </div>
 
           <!-- contact blok op nieuwpagina -->
-          {% if forloop.index0 == 1 %}
+          {% if forloop.index0 == 4 %}
             <div class="col--1-1 hide-desktop">
               {% include crosslink.html block-class="shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
             </div>
-          {% elsif forloop.index0 == 2 %}
+          {% elsif forloop.index0 == 5 %}
             <div class="col--1-1 show-tablet show-desktop">
             {% include crosslink.html block-class="shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
             </div>

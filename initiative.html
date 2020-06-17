@@ -1,64 +1,13 @@
 ---
-layout: default
+layout: initiatives
 title: Initiatieven
 teaser: Dit is de initiatieven-teaser
 permalink: /initiatieven/
+bodyclass: initiatives
 order: 2
-bodyclass: "initiatives"
+pagination:
+  enabled: true
+  collection: initiatives
+  permalink: /:num/
+  per_page: 12
 ---
-<section class="region">
-	<div class="layout layout--wide initiatives">
-
-		<h1 class="h1" id="initiatieven">Initiatieven</h1>
-
-		<div class="grid grid--is-stacked u-spacer">
-			{% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
-			{% for initiative in sorted %}
-
-				<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
-					<a href="{{ initiative.url | relative_url}}" class="spotlight yellow">
-						<article>
-							<header class="spotlight__header">
-								<div class="spotlight__image spotlight__image--focus-center-center">
-									<img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
-								</div>
-								<div class="spotlight__title-wrapper">
-									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
-								</div>
-							</header>
-							<div class="spotlight__text-wrapper">
-								<div class="spotlight__text">
-									{{ initiative.teaser | escape }}
-								</div>
-							</div>
-							<div class="category bullet-list bullet-list--location">
-								<div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
-							</div>
-							<div class="category bullet-list bullet-list--tag">
-								<div class="bullet-list__item">{{ initiative.tags | join: ", "}}</div>
-							</div>
-						</article>
-					</a>
-				</div>
-
-				<!-- contact blok op nieuwpagina -->
-				{% if forloop.index0 == 1 %}
-					<div class="col--1-1 show-mobile">
-						{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
-					</div>
-				{% elsif forloop.index0 == 2 %}
-						<div class="col--1-1 show-tablet">
-						{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
-						</div>
-				{% elsif forloop.index0 == 3 %}
-					<div class="col--1-1 show-desktop">
-					{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
-					</div>
-				{% endif %}
-				<!-- end contact block -->
-
-			{% endfor %}
-
-	  </div>
-	</div>
-</section>
