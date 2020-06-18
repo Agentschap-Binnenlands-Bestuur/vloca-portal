@@ -9,12 +9,14 @@ bodyclass: faq
 
     <div class="layout layout--wide">
       <h1 class="h1">Veelgestelde vragen</h1>
-      <div class="faq top">
-        <h2 class="h2">Onze top meestgestelde vragen</h2>
-        {% assign top-faqs = site.faqs | where:'top', 'true' %}
-        {% for faq in top-faqs %}
-          {{ faq }}
-        {% endfor %}
+      <div class="wide direct-to">
+        <div class="faq top">
+          <h2 class="h2">Onze top meestgestelde vragen</h2>
+          {% assign top-faqs = site.faqs | where:'top', 'true' %}
+          {% for faq in top-faqs %}
+            {{ faq }}
+          {% endfor %}
+        </div>
       </div>
     </div>
   </section>

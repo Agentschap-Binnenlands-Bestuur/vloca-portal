@@ -12,7 +12,7 @@ layout: default
       </div>
       <div class="col col--11-12--xl col--10-12--l col--1-1--s">
       {%
-        include 
+        include
         pill-navigation.html
         collection="initiatives"
         map="tags"
@@ -32,7 +32,7 @@ layout: default
               <a href="{{ initiative.url | relative_url}}">
   							<header class="spotlight__header">
   								<div class="spotlight__image spotlight__image--focus-center-center">
-  									<img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+  									<img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
   								</div>
   								<div class="spotlight__title-wrapper">
   									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>

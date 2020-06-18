@@ -77,7 +77,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
               <div class="category bullet-list bullet-list--tag">
                 <div class="bullet-list__item">
                 {% for category in post.categories %}
-                  <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                  <a class="" href="{{site.baseurl}}/nieuws/{{category | replace: ' ', '-'}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
                 {% endfor %}
                 </div>
               </div>
