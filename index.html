@@ -224,58 +224,9 @@ og-descrition: "Welcome to the homepage of VLOCA"
   {% include crosslink.html layout-class='normal' block-class='alt shadow'  url="/kennishub/" cta="knop" title="Meer weten over de Kennishub?" text="Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!" icon="addressbook" %}
 
   <section class="region">
-
     <div class="layout layout--wide">
-      <section class="info-block info-block--faq">
-        <header class="info-block__header">
-          <h1 class="info-block__title">Top veelgestelde vragen</h1>
-        </header>
-        <div class="info-block__content">
 
-            <div class="grid">
-
-              <div class="col--6-12 col--1-1--xs">
-                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="wat">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</a>
-              </div>
-              <div class="col--6-12 col--1-1--xs">
-                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="abc">Toon andere inhoud in kleine drawer consectetur adipisicing elit.</a>
-              </div>
-
-              <div class="drawer drawer--small js-drawer--small" data-drawer="456" tabindex="-1">
-
-                <a href="" class="link--icon--close drawer__close js-drawer__close">
-                  <span class="u-visually-hidden">Venster sluiten</span>
-                </a>
-
-                <div class="layout layout--wide">
-
-                  <div class="drawer__content" data-drawer-content="wat">
-                    <h1 class="h3">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</h1>
-                    <div class="typography">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit enim et aut ipsa aperiam optio at sint natus alias dolorem commodi distinctio minus eaque nostrum quaerat perspiciatis culpa, obcaecati quibusdam repellat esse? Facere consequuntur, omnis iure esse, non hic a accusantium neque voluptatem explicabo possimus cum quaerat cupiditate aperiam quasi doloremque facilis itaque nesciunt minus, dolor recusandae harum inventore! Aperiam eligendi architecto fuga saepe mollitia placeat voluptatibus rem, iusto rerum in nihil, officia, quia debitis. Molestias consequuntur dolore, rem quisquam dicta nisi laborum, recusandae nihil quae impedit dolores saepe tenetur distinctio natus repellendus magnam ducimus possimus. Velit, distinctio maiores.</p>
-                    </div>
-                  </div>
-
-                  <div class="drawer__content" data-drawer-content="abc">
-                    <h1 class="h3">Inhoud van de andere drawer</h1>
-                    <div class="typography">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nesciunt debitis perferendis voluptatem corporis quod totam quibusdam aut mollitia quo autem, at earum unde molestias esse cum, voluptatum, odio sit.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, facere quisquam sint architecto omnis. Quasi omnis dignissimos recusandae corrupti reiciendis. Minima officia dolores recusandae atque beatae aspernatur est repellat magni vero explicabo dignissimos voluptatum odit a dolor vitae, repellendus. Ducimus dolore eos obcaecati quia optio, minima ratione molestias, saepe distinctio inventore ipsa ea delectus, illo fugiat commodi tenetur. Dolores excepturi quae animi alias a debitis molestias officiis totam magnam nesciunt optio, magni, maxime. Vero nesciunt consectetur vel libero exercitationem deleniti! Voluptates perspiciatis ea incidunt, maiores, temporibus nemo fugiat adipisci molestiae eveniet facilis placeat facere id natus, qui nulla cupiditate voluptatum!</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="col--1-1 pad--top">
-                <a class="link--icon--caret strong" href="{{ site.baseurl }}/veelgestelde-vragen">Bekijk alle veelgestelde vragen</a>
-              </div>
-
-            </div>
-
-        </div>
-      </section>
+      {% include top-faq.html %}
 
     </div>
   </section>
