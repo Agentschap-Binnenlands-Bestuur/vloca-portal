@@ -55,7 +55,8 @@ og-descrition: "Welcome to the homepage of VLOCA"
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% for post in site.posts limit : 6 %}
+        {% assign posts = site.posts | sort: 'date' | sort: 'highlight' | reverse %}
+        {% for post in posts limit : 6  %}
         <div class="col--4-12 col--6-12--s col--1-1--xs">
           <div class="spotlight yellow spotlight--link">
             <article>
@@ -126,7 +127,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
+        {% assign sorted = site.initiatives | sort: 'date' | sort: 'highlight' | reverse %}
         {% for initiative in sorted limit : 5 %}
           {% if forloop.index0 == 0 %}
           <div class="col--1-1">
@@ -172,7 +173,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
                 <a href="{{ initiative.url | relative_url}}">
     							<header class="spotlight__header">
     								<div class="spotlight__image spotlight__image--focus-center-center">
-    									<img class="spotlight__image__img" src="//d201gzvprbtpxy.cloudfront.net/sites/default/files/styles/medium/public/images/vla_themateaser_350_verbouwen.jpg?itok=tgVTxQ67" alt="">
+    									<img class="spotlight__image__img" src="{{ initiative.thumb | relative_url}}" alt="">
     								</div>
     								<div class="spotlight__title-wrapper">
     									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>

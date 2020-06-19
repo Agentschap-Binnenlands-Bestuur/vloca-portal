@@ -23,8 +23,8 @@ layout: default
       </div>
 
       <div class="grid grid--is-stacked u-spacer">
-
-        {% for post in paginator.posts %}
+        {% assign posts = paginator.posts | sort: 'date' | sort: 'highlight' | reverse %}
+        {% for post in posts %}
           <div class="col--4-12 col--6-12--s col--1-1--xs">
             <div class="spotlight yellow spotlight--link">
               <article>

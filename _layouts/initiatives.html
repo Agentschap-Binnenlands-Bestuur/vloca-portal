@@ -22,8 +22,8 @@ layout: default
     </div>
 
 		<div class="grid grid--is-stacked u-spacer">
-
-			{% assign sorted = paginator.posts  | sort: 'highlight' | reverse %}
+			{% assign posts = paginator.posts | sort: 'date' | sort: 'highlight' | reverse %}
+			{% assign sorted = posts  %}
 			{% for initiative in sorted %}
 
 				<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
@@ -32,7 +32,7 @@ layout: default
               <a href="{{ initiative.url | relative_url}}">
   							<header class="spotlight__header">
   								<div class="spotlight__image spotlight__image--focus-center-center">
-  									<img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
+  									<img class="spotlight__image__img" src="{{ initiative.thumb | relative_url}}" alt="">
   								</div>
   								<div class="spotlight__title-wrapper">
   									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
