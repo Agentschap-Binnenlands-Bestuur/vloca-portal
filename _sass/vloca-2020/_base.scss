@@ -203,6 +203,17 @@ section {
   }
 }
 
+.bullet-list--tag {
+  a {
+    color: $color-label;
+    font-weight: 300;
+
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}
+
 
 //** visualise device depentend blocks **//
 /* hide */
