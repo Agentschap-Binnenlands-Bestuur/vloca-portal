@@ -17,7 +17,11 @@ layout: default
           </div>
 
           <div class="category bullet-list bullet-list--tag">
-            <div class="bullet-list__item">{{ page.tags | join: ", "}}</div>
+            <div class="bullet-list__item">
+              {% for tag in page.tags %}
+                <a href="{{site.baseurl}}/initiatieven/{{ tag | replace: ' ', '-' }}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+              {% endfor %}
+            </div>
           </div>
 
           <div class="introduction">

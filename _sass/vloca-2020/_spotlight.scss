@@ -54,16 +54,6 @@
     font-weight: 500;
   }
 
-  .bullet-list--tag {
-    a {
-      color: $color-label;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-
   &.highlight {
     .spotlight__image{
       height: 100%;

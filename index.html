@@ -73,9 +73,10 @@ is_front: true
               </a>
               <div class="category bullet-list bullet-list--tag">
                 <div class="bullet-list__item">
-                {% for category in post.categories %}
-                  <a href="{{site.baseurl}}/nieuws/{{category}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
-                {% endfor %}
+                  {% for category in post.categories %}
+                  {% assign category-path = category | replace: ' ', '-' %}
+                  <a href="{{site.baseurl}}/nieuws/{{category-path}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                  {% endfor %}
                 </div>
               </div>
             </article>
