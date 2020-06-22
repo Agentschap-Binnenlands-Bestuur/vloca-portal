@@ -3,17 +3,17 @@
   permalink: /nieuws/
   order: 1
 
-- title: Initiatieven
-  teaser: Dit is de initiatieven-teaser
-  permalink: /initiatieven/
-  order: 2
-
 - title: Over VLOCA
   teaser: Dit is de about-teaser
   permalink: /over-vloca/
   order: 3
 
+- title: Kennishub
+  teaser: Alles wat je moet weten om te kunnen samenwerken.
+  permalink: https://vloca-kennishub.vlaanderen.be
+  order: 4
+
 - title: Contacteer ons
   teaser: Achter deze link zit de contactpagina
-  permalink: /contact/
-  order: 4
+  permalink: http://stedenbeleid.vlaanderen.be/vloca-contactformulier
+  order: 5

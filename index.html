@@ -11,13 +11,197 @@ is_front: true
       <div class="grid">
         <div class="col--6-12 col--1-1--s">
           <h1 class="h1">VLOCA Portaal</h1>
-          <p class="introduction">Hier komt het VLOCA portaal. Nog een beetje geduld om mee te bouwen aan diverse projecten en toepassingen voor slimme steden, gemeenten en regio’s in Vlaanderen.</p>
-          <a class="button button__primary" href="#">Meer weten over VLOCA</a>
+          <p class="introduction">Bouw mee aan diverse projecten en toepassingen voor een slimme Vlaamse regio.</p>
+          <a class="button button__primary" href="{{ site.baseurl }}/over-vloca">Meer weten over VLOCA</a>
         </div>
         <div class="col--6-12 col--1-1--s">
           <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class='layout layout--wide'>
+      <div class="direct-to wide">
+        <label>Direct naar</label>
+        <div class="grid">
+          {% assign directs = site.directs | where:'type', 'home' %}
+          {% for direct in directs %}
+          <div class="col--4-12 col--6-12--s col--1-1--xs">
+            {% if direct.exturl %}
+              <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ direct.inturl }}" class="link--icon--caret link--block">{{ direct.title }}</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="region news">
+    <div class='layout layout--wide'>
+      <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
+        <div class="col">
+          <h2 class="h3" id="nieuws">Laatste nieuws</h2>
+        </div>
+        <div class="col">
+          <a class="link--icon--caret strong hide-mobile" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
+        </div>
+      </div>
+      <div class="grid grid--is-stacked u-spacer">
+        {% for post in site.posts limit : 6 %}
+        <div class="col--4-12 col--6-12--s col--1-1--xs">
+          <a href="{{ post.url | relative_url}}" class="spotlight yellow">
+            <article>
+              <header class="spotlight__header">
+                <div class="spotlight__image spotlight__image--focus-center-center">
+                  <img class="spotlight__image__img" src="{{ post.thumb | relative_url}}" alt="">
+                </div>
+                <div class="spotlight__title-wrapper">
+                  <h1 class="spotlight__title">{{ post.title | escape }}</h1>
+                </div>
+              </header>
+              <div class="spotlight__text-wrapper">
+                <div class="spotlight__text">
+                  {{ post.teaser | escape }}
+                </div>
+              </div>
+              <div class="category bullet-list bullet-list--tag">
+                <div class="bullet-list__item">{{ post.category }}</div>
+              </div>
+            </article>
+          </a>
+        </div>
+        {% endfor %}
+      </div>
+      <a class="link--icon--caret strong hide-desktop" href="{{ site.baseurl }}/nieuws">Bekijk alle nieuwsberichten</a>
+    </div>
+  </section>
+
+  <section class="region">
+    <div class='layout layout--wide'>
+      <div class="grid grid--is-stacked">
+        <div class="col--1-1">
+
+          <div class="quote">
+            <div class="quote__image-wrapper">
+              <img class="quote__image" src="{{ site.baseurl }}/assets/img/quote/bart_somers.jpg" alt="" />
+            </div>
+            <div class="quote__content">
+              <div class="quote__text">We moeten werken aan onze slimme steden. Dat is een positieve les die we moeten trekken uit de coronacrisis. Daarom zetten we VLOCA op, de Vlaamse Open City Architectuur.
+              </div>
+              <div class="quote__author">Bart Somers, Vlaams minister voor Binnenlands Bestuur en Stedenbeleid</div>
+              <div class="quote__reference">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="region">
+  </section>
+
+
+  <section class="region no-pad">
+    <div class="block content-split">
+        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
+        <div class="layout layout--wide">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
+            <h2 class="h3">Co-creatie is essentieel</h2>
+            <p>Werk je binnen een lokaal bestuur aan een slim beleid? Ben je aanbieder van innovatieve ICT-oplossingen of doe je academisch onderzoek in dit domein? Maak je deel uit van een burgerinitiatief dat op zoek gaat naar slimme stadsoplossingen? Dan doen we graag beroep op jouw ideeën, kennis en ervaring.</p>
+            <hr class="wave hr" />
+            <h3 class="h4">Vind het op onze kennishub</h3>
+            <p>De VLOCA Kennishub is gebaseerd op een MediaWiki platform. Dit laat toe om principes, concepten, componenten, … van VLOCA in detail te beschrijven, met ruimte om aanpassingen aan te brengen door iedereen die zich registreert. Zo komen we tot gedragen definities en standaarden.</p>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+<section class="region">
+
+  <div class="layout layout--normal">
+    <div class="block crosslink alt shadow">
+      <div class="crosslink__icon">
+        <div class="badge badge--accent badge--l badge--icon">
+          <i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="crosslink__text">
+        <h2 class="h4">Meer weten over de kennishub?</h2>
+        <p>Alles wat je moet weten om te kunnen samenwerken.</p>
+      </div>
+      <div class="crosslink__cta">
+        <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/">Kennishub</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+  <section class="region">
+
+    <div class="layout layout--wide">
+      <section class="info-block info-block--faq">
+        <header class="info-block__header">
+          <h1 class="info-block__title">Top veelgestelde vragen</h1>
+        </header>
+        <div class="info-block__content">
+
+            <div class="grid">
+
+              <div class="col--6-12 col--1-1--xs">
+                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="wat">Waarom zijn gedeelde afspraken nodig?  Waarom is standaardisatie nodig?</a>
+              </div>
+              <div class="col--6-12 col--1-1--xs">
+                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="abc">Waarom is de Kennishub belangrijk?</a>
+              </div>
+
+              <div class="drawer drawer--small js-drawer--small" data-drawer="456" tabindex="-1">
+
+                <a href="" class="link--icon--close drawer__close js-drawer__close">
+                  <span class="u-visually-hidden">Venster sluiten</span>
+                </a>
+
+                <div class="layout layout--wide">
+
+                  <div class="drawer__content" data-drawer-content="wat">
+                    <h1 class="h3">Waarom zijn gedeelde afspraken nodig?  Waarom is standaardisatie nodig?</h1>
+                    <div class="typography">
+                    <p>Het belang van standaardisatie zal niemand ontkennen. Gemeenschappelijke standaarden zijn nodig om de impact van digitale technologie te maximaliseren. Een van de grootste uitdagingen bij smart city-projecten is de opschaling. Veel projecten eindigen in de eerste fase met een proof of concept omdat ze vastzitten in een technologie die niet schaalbaar is.</p>
+                    <p>Door in te zetten op open standaarden zullen innovatieve ICT-oplossingen van concurrerende technologieleveranciers compatibel zijn met elkaar. Hierdoor zullen verschillende steden en gemeenten vrij zijn in het kiezen van de meest geschikte slimme oplossing voor stedelijke uitdagingen, zonder een vendor lock-in als mogelijk gevolg. Door eenzelfde taal te spreken, kunnen bruggen gebouwd worden tussen de verschillende beleidsdomeinen binnen de steden en gemeenten, maar ook tussen de steden en gemeenten onderling. </p>
+                    <p>Standaardisatie komt niet enkel de vraagzijde (steden en gemeenten) ten goede. Ook voor de aanbodzijde is dit een belangrijke evolutie. Door het gebruik van (kleinere) modulaire, herbruikbare componenten hebben leveranciers van digitale oplossingen met een minimale/kleine investering een groter klantbereik. Anderzijds laat standaardisatie toe om sneller te innoveren.</p>
+                    <p>De VLOCA zal dit proces faciliteren en richtlijnen en een kader aanreiken aan verschillende steden en gemeenten, zodat zij in de toekomst kiezen voor duurzame oplossingen die datafusie toelaten. Een gedeelde digitale architectuur zal samenwerking tussen steden en gemeenten op het vlak van smart cities faciliteren, en zal de digitale transformatie van onze lokale besturen vergemakkelijken en versnellen. </p>
+                    <p>De nood aan gemeenschappelijke standaarden voor smart city oplossingen is uiteraard geen nieuw gegeven. Wereldwijd beweegt er heel wat in het standaardisatielandschap. De VLOCA zal dan ook voortbouwen op reeds bestaande initiatieven in nationale, Europese en internationale context. De zoektocht naar de juiste standaarden is gaande en de VLOCA zal op het juiste moment van start gaan om geleerde lessen en goede praktijken te vertalen naar de Vlaamse context. Standaardisatie vormt een essentiële randvoorwaarde om de digitale transformatie in de steden en gemeenten te ondersteunen en versnellen.</p>
+                    <p>Het ontwikkelen van gedragen standaarden zal gebeuren in dialoog met steden en gemeenten, kennistellingen, bedrijven en burgerbewegingen. Voor het uitwerken van de processen en de methodieken halen we inspiratie bij de OSLO-trajecten van het Agentschap Informatie Vlaanderen. Meer info over OSLO is <a href="https://overheid.vlaanderen.be/oslo-wat-is-oslo">hier</a> terug te vinden. </p>
+                    </div>
+                  </div>
+
+                  <div class="drawer__content" data-drawer-content="abc">
+                    <h1 class="h3">Waarom is de Kennishub belangrijk?</h1>
+                    <div class="typography">
+                      <p>We nodigen iedereen binnen het smart city landschap uit om de Vlaamse Open City Architectuur mee vorm te geven via co-creatie op de kennishub. Het mee vormgeven aan VLOCA kan eigen ervaringen, noden of expertise. Op de kennishub krijgt de VLOCA zo op co-creatieve wijze vorm dankzij jullie ideeën. Deze kennishub is gebaseerd op een Semantisch MediaWiki platform.</p>
+                      <p>In de eerste fase, vanaf juli 2020, capteren we bottom-up initiatieven via de kennishub om zo gradueel de Vlaamse Open City Architectuur op te bouwen. Imec en VITO zijn door het Agentschap Binnenlands Bestuur aangesteld om initieel de opbouw van VLOCA te inspireren, te modereren, de co-creatie in goede banen te leiden, ervaringen te delen en ervoor te zorgen dat het proces daadwerkelijk leidt tot de concrete uitwerking van een realistische architectuur en draaiboeken voor diverse smart city initiatieven.</p>
+                      <p>Een goed review proces is hierbij essentieel om op de kennishub VLOCA kwaliteitsdoelstellingen te bereiken. Het VLOCA coördinatieteam van ABB, IMEC en VITO heeft daarom sterke aandacht voor ongewenst digitaal vandalisme of pseudo-kennis, zodat de pure co-creatie tussen steden en gemeenten, bedrijven, burgers en kennisinstellingen steeds centraal blijft staan.</p>
+                      <p>Tevens wordt VLOCA het neutrale referentiekader in Vlaanderen, los van commerciële belangenvermenging. We nodigen leveranciers van Smart City oplossingen uit om een architectuur of standaarden voorstellen die aligneren met de basisprincipes zoals interoperabiliteit en open standaarden en de geest van VLOCA volgt.</p>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+        </div>
+      </section>
+
     </div>
   </section>
 
