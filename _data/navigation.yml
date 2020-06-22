@@ -8,7 +8,12 @@
   permalink: /over-vloca/
   order: 3
 
+- title: Kennishub
+  teaser: Alles wat je moet weten om te kunnen samenwerken.
+  permalink: https://vloca-kennishub.vlaanderen.be
+  order: 4
+
 - title: Contacteer ons
   teaser: Achter deze link zit de contactpagina
   permalink: http://stedenbeleid.vlaanderen.be/vloca-contactformulier
-  order: 4
+  order: 5
