@@ -1,8 +1,8 @@
 (() => {
 
+
   let _mobileNav = document.body.querySelector(".mobilemenu__toggle");
   let _mobileMenu = document.body.querySelector(".mobilemenu");
-
 
   _mobileNav.addEventListener('click', function(e){
 
@@ -15,4 +15,5 @@
     }
 
   });
+
 })()
