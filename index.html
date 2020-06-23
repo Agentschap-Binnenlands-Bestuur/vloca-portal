@@ -3,6 +3,7 @@ layout: default
 title: VLOCA
 teaser: Dit is de homepage-teaser
 is_front: true
+og-descrition: "Welcome to the homepage of VLOCA"
 ---
 <div class="home layout">
 
@@ -15,7 +16,9 @@ is_front: true
           <a class="button button__primary" href="#">Meer weten over VLOCA</a>
         </div>
         <div class="col--6-12 col--1-1--s">
-          <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
+          <a data-fancybox data-width="640" data-height="360" href="{{ site.baseurl }}/assets/video/example.mp4" class="fancy-box video">
+            <img src="{{ site.baseurl }}/assets/img/homepage/hero_homepage.png"/>
+          </a>
         </div>
       </div>
     </div>
@@ -52,10 +55,12 @@ is_front: true
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% for post in site.posts limit : 6 %}
+        {% assign posts = site.posts | sort: 'date' | sort: 'highlight' | reverse %}
+        {% for post in posts limit : 6  %}
         <div class="col--4-12 col--6-12--s col--1-1--xs">
-          <a href="{{ post.url | relative_url}}" class="spotlight yellow">
+          <div class="spotlight yellow spotlight--link">
             <article>
+              <a href="{{ post.url | relative_url}}" >
               <header class="spotlight__header">
                 <div class="spotlight__image spotlight__image--focus-center-center">
                   <img class="spotlight__image__img" src="{{ post.thumb | relative_url}}" alt="">
@@ -69,11 +74,17 @@ is_front: true
                   {{ post.teaser | escape }}
                 </div>
               </div>
+              </a>
               <div class="category bullet-list bullet-list--tag">
-                <div class="bullet-list__item">{{ post.category }}</div>
+                <div class="bullet-list__item">
+                  {% for category in post.categories %}
+                  {% assign category-path = category | replace: ' ', '-' %}
+                  <a href="{{site.baseurl}}/nieuws/{{category-path}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                  {% endfor %}
+                </div>
               </div>
             </article>
-          </a>
+          </div>
         </div>
         {% endfor %}
       </div>
@@ -116,18 +127,21 @@ is_front: true
         </div>
       </div>
       <div class="grid grid--is-stacked u-spacer">
-        {% assign sorted = site.initiatives | sort: 'highlight' | reverse %}
+        {% assign sorted = site.initiatives | sort: 'date' | sort: 'highlight' | reverse %}
         {% for initiative in sorted limit : 5 %}
           {% if forloop.index0 == 0 %}
-            <div class="col--1-1">
-              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow highlight shadow">
-                <article class="grid">
-                  <header class="spotlight__header col--9-12 col--8-12--m col--6-12--s col--1-1--xs">
+          <div class="col--1-1">
+            <div class="spotlight yellow highlight shadow spotlight--link">
+              <article class="grid">
+                <header class="spotlight__header col--9-12 col--8-12--m col--6-12--s col--1-1--xs">
+                  <a href="{{ initiative.url | relative_url}}">
                     <div class="spotlight__image spotlight__image--focus-center-center">
                       <img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
                     </div>
-                  </header>
-                  <content class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+                  </a>
+                </header>
+                <content class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+                  <a href="{{ initiative.url | relative_url}}">
                     <div class="spotlight__title-wrapper">
                       <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
                     </div>
@@ -139,39 +153,53 @@ is_front: true
                     <div class="category bullet-list bullet-list--location">
                       <div class="bullet-list__item">{{ initiative.location | join: ", " }}</div>
                     </div>
-                    <div class="category bullet-list bullet-list--tag">
-                      <div class="bullet-list__item">{{ initiative.tags | join: ", " }}</div>
-                    </div>
-                  </content>
-                </article>
-              </a>
-            </div>
-          {% else %}
-            <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
-              <a href="{{ initiative.url | relative_url}}" class="spotlight yellow">
-                <article>
-                  <header class="spotlight__header">
-                    <div class="spotlight__image spotlight__image--focus-center-center">
-                      <img class="spotlight__image__img" src="{{ initiative.img | relative_url}}" alt="">
-                    </div>
-                    <div class="spotlight__title-wrapper">
-                      <h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
-                    </div>
-                  </header>
-                  <div class="spotlight__text-wrapper">
-                    <div class="spotlight__text">
-                      {{ initiative.teaser | escape }}
-                    </div>
-                  </div>
-                  <div class="category bullet-list bullet-list--location">
-                    <div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
-                  </div>
+                  </a>
                   <div class="category bullet-list bullet-list--tag">
-                    <div class="bullet-list__item">{{ initiative.tags | join: ", "}}</div>
+                    <div class="bullet-list__item">
+                      {% for tag in initiative.tags %}
+                      {% assign tag-path = tag | replace: ' ', '-' %}
+                        <a class="" href="{{site.baseurl}}/initiatieven/{{tag-path}}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                      {% endfor %}
+                    </div>
                   </div>
-                </article>
-              </a>
+                </content>
+              </article>
             </div>
+          </div>
+          {% else %}
+          <div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+            <div class="spotlight yellow spotlight--link">
+    					<article>
+                <a href="{{ initiative.url | relative_url}}">
+    							<header class="spotlight__header">
+    								<div class="spotlight__image spotlight__image--focus-center-center">
+    									<img class="spotlight__image__img" src="{{ initiative.thumb | relative_url}}" alt="">
+    								</div>
+    								<div class="spotlight__title-wrapper">
+    									<h1 class="spotlight__title">{{ initiative.title | escape }}</h1>
+    								</div>
+    							</header>
+    							<div class="spotlight__text-wrapper">
+    								<div class="spotlight__text">
+    									{{ initiative.teaser | escape }}
+    								</div>
+    							</div>
+      					</a>
+                <div class="category bullet-list bullet-list--location">
+                  <div class="bullet-list__item">{{ initiative.location | join: ", "}}</div>
+                </div>
+                <div class="category bullet-list bullet-list--tag">
+                  <div class="bullet-list__item">
+                    {% for tag in initiative.tags %}
+                    {% assign tag-path = tag | replace: ' ', '-' %}
+                      <a class="" href="{{site.baseurl}}/initiatieven/{{tag-path}}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
+                    {% endfor %}
+                  </div>
+                </div>
+    					</article>
+            </div>
+  				</div>
+
           {% endif %}
         {% endfor %}
       </div>
@@ -197,58 +225,9 @@ is_front: true
   {% include crosslink.html layout-class='normal' block-class='alt shadow'  url="/kennishub/" cta="knop" title="Meer weten over de Kennishub?" text="Alles wat je moet weten over initiatieven, tot in de puntjes uitgelegd!" icon="addressbook" %}
 
   <section class="region">
-
     <div class="layout layout--wide">
-      <section class="info-block info-block--faq">
-        <header class="info-block__header">
-          <h1 class="info-block__title">Top veelgestelde vragen</h1>
-        </header>
-        <div class="info-block__content">
 
-            <div class="grid">
-
-              <div class="col--6-12 col--1-1--xs">
-                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="wat">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</a>
-              </div>
-              <div class="col--6-12 col--1-1--xs">
-                <a href="#link-to-detailpage" class="toggle--arrow-down" data-drawer-id="456" data-drawer-content-id="abc">Toon andere inhoud in kleine drawer consectetur adipisicing elit.</a>
-              </div>
-
-              <div class="drawer drawer--small js-drawer--small" data-drawer="456" tabindex="-1">
-
-                <a href="" class="link--icon--close drawer__close js-drawer__close">
-                  <span class="u-visually-hidden">Venster sluiten</span>
-                </a>
-
-                <div class="layout layout--wide">
-
-                  <div class="drawer__content" data-drawer-content="wat">
-                    <h1 class="h3">Wat is de betekenis van VLOCA, Vlaams Open City Architectuur</h1>
-                    <div class="typography">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates impedit enim et aut ipsa aperiam optio at sint natus alias dolorem commodi distinctio minus eaque nostrum quaerat perspiciatis culpa, obcaecati quibusdam repellat esse? Facere consequuntur, omnis iure esse, non hic a accusantium neque voluptatem explicabo possimus cum quaerat cupiditate aperiam quasi doloremque facilis itaque nesciunt minus, dolor recusandae harum inventore! Aperiam eligendi architecto fuga saepe mollitia placeat voluptatibus rem, iusto rerum in nihil, officia, quia debitis. Molestias consequuntur dolore, rem quisquam dicta nisi laborum, recusandae nihil quae impedit dolores saepe tenetur distinctio natus repellendus magnam ducimus possimus. Velit, distinctio maiores.</p>
-                    </div>
-                  </div>
-
-                  <div class="drawer__content" data-drawer-content="abc">
-                    <h1 class="h3">Inhoud van de andere drawer</h1>
-                    <div class="typography">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit nesciunt debitis perferendis voluptatem corporis quod totam quibusdam aut mollitia quo autem, at earum unde molestias esse cum, voluptatum, odio sit.</p>
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit, facere quisquam sint architecto omnis. Quasi omnis dignissimos recusandae corrupti reiciendis. Minima officia dolores recusandae atque beatae aspernatur est repellat magni vero explicabo dignissimos voluptatum odit a dolor vitae, repellendus. Ducimus dolore eos obcaecati quia optio, minima ratione molestias, saepe distinctio inventore ipsa ea delectus, illo fugiat commodi tenetur. Dolores excepturi quae animi alias a debitis molestias officiis totam magnam nesciunt optio, magni, maxime. Vero nesciunt consectetur vel libero exercitationem deleniti! Voluptates perspiciatis ea incidunt, maiores, temporibus nemo fugiat adipisci molestiae eveniet facilis placeat facere id natus, qui nulla cupiditate voluptatum!</p>
-                    </div>
-                  </div>
-
-                </div>
-
-              </div>
-
-              <div class="col--1-1 pad--top">
-                <a class="link--icon--caret strong" href="{{ site.baseurl }}/veelgestelde-vragen">Bekijk alle veelgestelde vragen</a>
-              </div>
-
-            </div>
-
-        </div>
-      </section>
+      {% include top-faq.html %}
 
     </div>
   </section>

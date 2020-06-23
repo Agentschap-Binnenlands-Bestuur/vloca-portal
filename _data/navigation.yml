@@ -13,7 +13,12 @@
   permalink: /over-vloca/
   order: 3
 
+- title: Veelgestelde vragen
+  teaser: Heeft u een vraag? bekijk onze veelgestelde vragen.
+  permalink: /veelgestelde-vragen/
+  order: 4
+
 - title: Contacteer ons
   teaser: Achter deze link zit de contactpagina
   permalink: /contact/
-  order: 4
+  order: 5

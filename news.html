@@ -1,56 +1,12 @@
 ---
-layout: default
+layout: news
 title: Nieuws
 teaser: Lees hier de allerlaatste nieuws en blog berichten rond de Open City Architectuur
 permalink: /nieuws/
 order: 1
+pagination:
+  enabled: true
+  collection: posts
+  permalink: /:num/
+  per_page: 12
 ---
-<div class="news layout">
-  <section class="region">
-
-    <div class="layout layout--wide">
-      <h1 class="h1">Nieuws</h1>
-      <div class="grid grid--is-stacked u-spacer">
-
-        {% for post in site.posts %}
-          <div class="col--4-12 col--6-12--s col--1-1--xs">
-            <a href="{{ post.url | relative_url}}" class="spotlight yellow">
-              <article>
-                <header class="spotlight__header">
-                  <div class="spotlight__image spotlight__image--focus-center-center">
-                    <img class="spotlight__image__img" src="{{ site.baseurl}}{{ post.thumb | relative_url}}" alt="">
-                  </div>
-                  <div class="spotlight__title-wrapper">
-                    <h1 class="spotlight__title">{{ post.title | escape }}</h1>
-                  </div>
-                </header>
-                <div class="spotlight__text-wrapper">
-                  <div class="spotlight__text">
-                    {{ post.teaser | escape }}
-                  </div>
-                </div>
-                <div class="category bullet-list bullet-list--tag">
-                  <div class="bullet-list__item">{{ post.category }}</div>
-                </div>
-              </article>
-            </a>
-          </div>
-
-          <!-- contact blok op nieuwpagina -->
-          {% if forloop.index0 == 1 %}
-            <div class="col--1-1 hide-desktop">
-              {% include crosslink.html block-class="shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
-            </div>
-          {% elsif forloop.index0 == 2 %}
-            <div class="col--1-1 show-tablet show-desktop">
-            {% include crosslink.html block-class="shadow" url="/contact/" title="Wil je meer informatie krijgen rond de laatste ontwikkelingen op ons platform?" text="Neem contact met ons op." cta="Contacteer ons" icon="addressbook" %}
-            </div>
-          {% endif %}
-          <!-- end contact block -->
-
-        {% endfor %}
-      </div>
-    </div>
-
-  </section>
-</div>

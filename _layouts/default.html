@@ -22,11 +22,24 @@ og: http://ogp.me/ns#">
 
 		{% include footer.html %}
 
-	<script src="https://use.fontawesome.com/415c4aae00.js"></script>
-	<script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
-	<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
-	<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-  <script src="{{site.baseurl}}/assets/js/vloca.js?is=lkj"></script>
+		<script src="https://use.fontawesome.com/415c4aae00.js"></script>
+		<script src="//dij151upo6vad.cloudfront.net/2.latest/js/vlaanderen-ui.js"></script>
+		<script type="text/javascript" src="//widgets.vlaanderen.be/widget/live/98fdfb015ef640da8fbc2267945d0bdd"></script>
+		<script src="//cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+		<script src="{{site.baseurl}}/assets/js/jquery3-5-1.min.js"></script>
+		<script type="text/javascript">
+			var jQuery = $.noConflict(true);
+			var $ = jQuery;
+		</script>
+
+		{% if page.is_front %}
+		<script type="text/javascript" src="{{site.baseurl}}/assets/js/slick.min.js"></script>
+		<script type="text/javascript" src="{{site.baseurl}}/assets/js/vloca-slick.js"></script>
+		{% endif %}
+
+		<script src="{{site.baseurl}}/assets/js/jquery.fancybox.min.js"></script>
+		<script src="{{site.baseurl}}/assets/js/vloca.js?is=lkj"></script>
+
 	</body>
 
 </html>
