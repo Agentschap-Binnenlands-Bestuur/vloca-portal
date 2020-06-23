@@ -33,11 +33,11 @@ bodyclass: faq
   <div class="layout layout--wide">
     <div class="faq all">
       <h2 class="h4">Bekijk alle veelgestelde vragen</h2>
-      {% assign groups = site.faqs | group_by: "categories" | sort: "name" %}
+      {% assign groups = site.faqs | group_by: "category" | sort: "name" %}
 
       {% for group in groups %}
       <section class="pad--bottom faq__category">
-        <h3 class="h3">{{ group.name | slugify }}</h3>
+        <h3 class="h3">{{ group.name }}</h3>
         {% for item in group.items %}
         <div class="js-accordion">
           <!-- toggle -->
