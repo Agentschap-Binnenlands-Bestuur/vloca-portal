@@ -8,7 +8,7 @@
   			<ul data-mobilemenu-depth="1">
           {% assign navigation = site.data.navigation | sort: 'order' %}
           {% for nav in navigation %}
-            <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}{{ nav.permalink }}" class="active-trail {% if page.url contains {{nav.permalink}} %}active{% endif %}">{{ nav.title | escape }}</a></li>
+            <li class="mobilemenu__link active-trail"><a href="{{ site.baseurl }}{{ nav.permalink }}" class="active-trail {% if page.url contains {{nav.permalink}} %}active{% endif %}"{%if nav.permalink contains 'https://' or nav.permalink contains 'http://' %} target="_blank"{% endif %}>{{ nav.title | escape }}</a></li>
           {% endfor %}
 
   			</ul>

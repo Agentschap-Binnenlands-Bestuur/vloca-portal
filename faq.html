@@ -1,0 +1,55 @@
+---
+layout: default
+title: Veelgestelde vragen
+permalink: /veelgestelde-vragen/
+bodyclass: faq
+---
+<div class="news layout">
+  <section class="region">
+
+    <div class="layout layout--wide">
+      <h1 class="h1">Veelgestelde vragen</h1>
+      <div class="faq top direct-to wide">
+        <h2 class="h4">Onze top meestgestelde vragen</h2>
+        {% assign top-faqs = site.faqs | where:'top', 'true' %}
+        {% for faq in top-faqs %}
+          <div class="js-accordion">
+            <!-- toggle -->
+            <a class="toggle toggle--arrow-down js-accordion__toggle"><i class="toggle__icon" aria-hidden="true"></i>{{ faq.title }}</a>
+            <div class="accordion__content">
+              <div class="u-bg-block">
+                {{faq.content}}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <div class="layout layout--wide">
+    <div class="faq all">
+      <h2 class="h4">Bekijk alle veelgestelde vragen</h2>
+      {% assign groups = site.faqs | group_by: "category" | sort: "name" %}
+
+      {% for group in groups %}
+      <section class="pad--bottom faq__category">
+        <h3 class="h3">{{ group.name }}</h3>
+        {% for item in group.items %}
+        <div class="js-accordion">
+          <!-- toggle -->
+          <a class="toggle toggle--arrow-down js-accordion__toggle"><i class="toggle__icon" aria-hidden="true"></i>{{ item.title }}</a>
+          <div class="accordion__content">
+            <div class="u-bg-block">
+              {{item.content}}
+            </div>
+          </div>
+        </div>
+        {%endfor%}
+      </div>
+      {%endfor%}
+
+    </div>
+  </div>
+
+</div>
