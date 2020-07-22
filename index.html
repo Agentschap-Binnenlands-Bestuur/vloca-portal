@@ -78,7 +78,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
               <div class="category bullet-list bullet-list--tag">
                 <div class="bullet-list__item">
                   {% for category in post.categories %}
-                  {% assign category-path = category | replace: ' ', '-' %}
+                  {% assign category-path = category | replace: ' ', '-'  | downcase %}
                   <a href="{{site.baseurl}}/nieuws/{{category-path}}">{{ category | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
                   {% endfor %}
                 </div>
@@ -157,7 +157,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
                   <div class="category bullet-list bullet-list--tag">
                     <div class="bullet-list__item">
                       {% for tag in initiative.tags %}
-                      {% assign tag-path = tag | replace: ' ', '-' %}
+                      {% assign tag-path = tag | replace: ' ', '-'  | downcase %}
                         <a class="" href="{{site.baseurl}}/initiatieven/{{tag-path}}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
                       {% endfor %}
                     </div>
@@ -191,7 +191,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
                 <div class="category bullet-list bullet-list--tag">
                   <div class="bullet-list__item">
                     {% for tag in initiative.tags %}
-                    {% assign tag-path = tag | replace: ' ', '-' %}
+                    {% assign tag-path = tag | replace: ' ', '-'  | downcase %}
                       <a class="" href="{{site.baseurl}}/initiatieven/{{tag-path}}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
                     {% endfor %}
                   </div>

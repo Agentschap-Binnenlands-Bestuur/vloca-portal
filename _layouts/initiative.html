@@ -27,7 +27,7 @@ layout: default
           <div class="category bullet-list bullet-list--tag">
             <div class="bullet-list__item">
               {% for tag in page.tags %}
-              {% assign tag-path = tag | replace: ' ', '-' %}
+              {% assign tag-path = tag | replace: ' ', '-'  | downcase %}
                 <a href="{{site.baseurl}}/initiatieven/{{tag-path}}">{{ tag | capitalize }}</a>{% if forloop.last != true %}, {% endif %}
               {% endfor %}
             </div>
