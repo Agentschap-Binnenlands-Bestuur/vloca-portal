@@ -26,8 +26,9 @@ Installing Ruby and Jekyll becomes very easy using WSL!
   ```
   Acquire::http::Proxy "http://proxy_hostname:proxy_port";
   ```
+    * If you are on Ubuntu and don't know how to edit a text file, use nano: ```sudo nano /etc/apt/apt.conf.d/99proxy```, paste content using the right mouse button in Windows, save the file using CTRL+S, close nano using CTRL+X.
   * Test by running ```sudo apt-get update```, apt should update your package index.
-  * To set the proxy in the bash shell, add following two lines to ```$HOME/.bashrc```
+  * To set the proxy in the bash shell, add following two lines to ```$HOME/.bashrc``` using nano or another text editor.
   ```
   export http_proxy="http://proxy_hostname:proxy_port"
   export https_proxy="http://proxy_hostname:proxy_port"
