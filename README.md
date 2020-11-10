@@ -1,6 +1,7 @@
 # VLOCA-portal
 [Jekyll](https://jekyllrb.com/) based web site for the Flemish government "Vlaamse Open City Architectuur" initiative. Refer to https://www.vlaanderen.be/vloca for more info on VLOCA itself..
 
+
 ## Branches in this repo
 Three branches are significant:
 * dev: gathers commits from developers. Start your work here. Always unless you know your specific work should not start here.
