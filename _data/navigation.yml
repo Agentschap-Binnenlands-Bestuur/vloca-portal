@@ -6,11 +6,16 @@
 - title: Over VLOCA
   teaser: Dit is de about-teaser
   permalink: /over-vloca/
-  order: 3
+  order: 2
 
 - title: Kennishub
   teaser: Alles wat je moet weten om te kunnen samenwerken.
   permalink: https://vloca-kennishub.vlaanderen.be
+  order: 3
+
+- title: Trajecten
+  teaser: Informatie over de concrete VLOCA trajecten
+  permalink: '/trajecten'
   order: 4
 
 - title: Veelgestelde vragen
