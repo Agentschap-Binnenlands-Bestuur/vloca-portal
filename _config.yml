@@ -36,10 +36,10 @@ exclude:
 
 # Collections
 collections:
-  initiatives:
+  trajecten:
     output: true
-    permalink: /initiatieven/:title/
-    bodyclass: "initiative"
+    permalink: /trajecten/:title/
+    bodyclass: "traject"
   posts:
     output: true
     permalink: /nieuws/:title/
@@ -65,10 +65,10 @@ defaults:
     values:
       image: true
   - scope:
-      type: "initiatives"
+      type: "trajecten"
     values:
-      layout: initiative
-      bodyclass: "initiative"
+      layout: traject
+      bodyclass: "traject"
   - scope:
       type: "posts"
     values:
