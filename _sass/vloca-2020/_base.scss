@@ -81,6 +81,20 @@ section {
   }
 }
 
+ul.disc {
+  list-style: disc;
+  .bullet-list__item {
+    padding-left: 2.4rem;
+    //color: $color-label;
+    &:before{
+      color:$border-color;
+    }
+  }
+  &.bullet-list--location .bullet-list__item:before {
+    content: "\E020"
+  }
+}
+
 .fancy-box.video {
   display:block;
   &:after {
