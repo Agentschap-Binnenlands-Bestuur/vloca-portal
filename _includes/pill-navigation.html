@@ -9,6 +9,6 @@
   {% if page.url contains col-label %}
   <div class="pill pill--closable active"><span>{{col | capitalize}}</span><a class="pill__close" href="{{ site.basurl }}/{{url}}/">sluiten</a></div>
   {% else %}
-  <a class="pill pill--clickable" href="{{ site.basurl }}/{{url}}/{{col-label}}">{{col | capitalize}}</a>
+  <a class="pill pill--clickable" href="{{ site.basurl }}/{{url}}{{col-label}}">{{col | capitalize}}</a>
   {% endif %}
 {% endfor %}
