@@ -18,12 +18,18 @@
   permalink: '/trajecten'
   order: 4
 
+  
 - title: Veelgestelde vragen
   teaser: Heeft u een vraag? bekijk onze veelgestelde vragen.
   permalink: /veelgestelde-vragen/
   order: 5
 
+- title: Toekomstige Events
+  teaser: Wanneer zijn de VLOCA events?
+  permalink: /calendar/
+  order: 6
+  
 - title: Contacteer ons
   teaser: Achter deze link zit de contactpagina
   permalink: http://stedenbeleid.vlaanderen.be/vloca-contactformulier
-  order: 6
+  order: 7

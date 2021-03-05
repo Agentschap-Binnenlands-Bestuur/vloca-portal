@@ -48,6 +48,10 @@ collections:
     permalink: /veelgestelde-vragen/:title
   directs:
     output: false
+  events:
+    output: true
+    permalink: /events/:path/
+    title: Events
 
 # Pagination Settings
 pagination:
