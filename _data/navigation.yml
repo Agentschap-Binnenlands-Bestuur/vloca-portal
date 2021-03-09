@@ -1,16 +1,16 @@
 - title: Nieuws
   teaser: Lees hier de allerlaatste nieuws en blog berichten rond de Open City Architectuur
-  permalink: /nieuws/
+  permalink: /nieuws
   order: 1
 
 - title: Over VLOCA
   teaser: Dit is de about-teaser
-  permalink: /over-vloca/
+  permalink: /over-vloca
   order: 2
 
 - title: Kennishub
   teaser: Alles wat je moet weten om te kunnen samenwerken.
-  permalink: /kennishub/
+  permalink: /kennishub
   order: 3
 
 - title: Trajecten
@@ -21,7 +21,7 @@
   
 - title: Veelgestelde vragen
   teaser: Heeft u een vraag? bekijk onze veelgestelde vragen.
-  permalink: /veelgestelde-vragen/
+  permalink: /veelgestelde-vragen
   order: 5
 
 - title: Toekomstige Events
