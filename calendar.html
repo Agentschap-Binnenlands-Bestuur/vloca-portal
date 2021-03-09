@@ -1,0 +1,61 @@
+---
+layout: page
+title: Binnenkort beschikbaar
+permalink: /calendar/
+---	      
+
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"   
+integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>-->
+<!-- <script type="text/javascript" src="/scripts/moment.min.js"></script> -->
+<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script> -->
+<link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+<!--<link rel="stylesheet" media="print" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.print.css"> -->
+
+
+
+
+<div id="calendar"></div>
+
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js'></script>
+<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+
+
+
+<script>
+$(document).ready(function() {
+
+	$('#calendar').fullCalendar({
+		events:'/calendar-data',
+			  week: {
+				dow: 1, // Monday is the first day of the week.
+				doy: 4, // The week that contains Jan 4th is the first week of the year.
+			  },
+			  buttonText: {
+				prev: 'Vorige',
+				next: 'Volgende',
+				today: 'Vandaag',
+				year: 'Jaar',
+				month: 'Maand',
+				week: 'Week',
+				day: 'Dag',
+				list: 'Agenda',
+			  },
+			  allDayText: 'Hele dag',
+			  moreLinkText: 'extra',
+			  dayNamesShort: ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'],
+			  monthNames: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December']
+	})
+
+});
+
+</script>
+
+<!--
+{% for event in site.events %}
+{{event.title}} {{event.event_date}}<br/>
+{% endfor %}
+-->
+
+
