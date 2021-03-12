@@ -1,14 +1,21 @@
 ---
 layout: page
-title: Binnenkort beschikbaar
+title: Evenementen 
 permalink: /calendar/
----	      
+---
+
+<div class="paragraph paragraph__text">
+	  <div class='layout layout--condensed'>
+	    <div class="grid grid--is-stacked">
+	      <div class="col--1-1">   
+		      
+		      
 
 <!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"   
 integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>-->
 <!-- <script type="text/javascript" src="/scripts/moment.min.js"></script> -->
 <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.min.js"></script> -->
-<link rel='stylesheet' href='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.css' />
+<link rel='stylesheet' href='{{ site.baseurl }}/assets/css/fullcalendar/fullcalendar.min.css' />
 <!--<link rel="stylesheet" media="print" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.2.0/fullcalendar.print.css"> -->
 
 
@@ -16,10 +23,10 @@ integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="an
 
 <div id="calendar"></div>
 
-<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/moment.min.js'></script>
-<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery.min.js'></script>
-<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/lib/jquery-ui.min.js'></script>
-<script src='https://fullcalendar.io/js/fullcalendar-3.1.0/fullcalendar.min.js'></script>
+<script src='{{ site.baseurl }}/assets/js/fullcalendar/moment.min.js'></script>
+<script src='{{ site.baseurl }}/assets/js/fullcalendar/jquery.min.js'></script>
+<script src='{{ site.baseurl }}/assets/js/fullcalendar/jquery-ui.min.js'></script>
+<script src='{{ site.baseurl }}/assets/js/fullcalendar/fullcalendar.min.js'></script>
 
 
 
@@ -45,7 +52,8 @@ $(document).ready(function() {
 			  allDayText: 'Hele dag',
 			  moreLinkText: 'extra',
 			  dayNamesShort: ['Zo', 'Ma', 'Di', 'Wo', 'Do', 'Vr', 'Za'],
-			  monthNames: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December']
+			  monthNames: ['Januari', 'Februari', 'Maart', 'April', 'Mei', 'Juni', 'Juli', 'Augustus', 'September', 'Oktober', 'November', 'December'],
+			  weekends: false
 	})
 
 });
