@@ -6,9 +6,18 @@
 {% for col in collection %}
 
   {% assign col-label = '/' | append: col | append: '/' | replace: ' ', '-' | downcase %}
-  {% if page.url contains col-label %}
-  <div class="pill pill--closable active"><span>{{col | capitalize}}</span><a class="pill__close" href="{{ site.basurl }}/{{url}}/">sluiten</a></div>
+  {% assign col-label-down = col-label | downcase %}
+  {% assign url-down = page.url | downcase %}
+  
+  {% if col == col | upcase %}
+	{% assign col-label-actual = col %}
   {% else %}
-  <a class="pill pill--clickable" href="{{ site.basurl }}/{{url}}{{col-label}}">{{col | capitalize}}</a>
+	{% assign col-label-actual = col | capitalize %}
+  {% endif %}
+  
+  {% if url-down contains col-label-down %}
+  <div class="pill pill--closable active"><span>{{col-label-actual}}</span><a class="pill__close" href="{{ site.basurl }}/{{url}}/">sluiten</a></div>
+  {% else %}
+  <a class="pill pill--clickable" href="{{ site.basurl }}/{{url}}{{col-label}}">{{col-label-actual}}</a>
   {% endif %}
 {% endfor %}
