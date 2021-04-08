@@ -45,7 +45,7 @@ collections:
     permalink: /nieuws/:title/
   faqs:
     output: true
-    permalink: /veelgestelde-vragen/:title
+    permalink: /faq/:title
   directs:
     output: false
   events:
