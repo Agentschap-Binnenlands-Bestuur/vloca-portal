@@ -19,12 +19,12 @@
   order: 4
 
   
-- title: Veelgestelde vragen
-  teaser: Heeft u een vraag? bekijk onze veelgestelde vragen.
-  permalink: /veelgestelde-vragen
+- title: FAQ
+  teaser: Heeft u een vraag? bekijk onze FAQ.
+  permalink: /faq
   order: 5
 
-- title: Toekomstige Events
+- title: Planning
   teaser: Wanneer zijn de VLOCA events?
   permalink: /calendar/
   order: 6
