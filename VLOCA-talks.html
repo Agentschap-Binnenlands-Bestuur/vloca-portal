@@ -1,0 +1,69 @@
+---
+layout: default
+title: VLOCA Talks
+teaser: Dit is de vloca-talks-teaser
+order: 2
+bodyclass: "VLOCA talks"
+---
+<section class="region">
+	<div class="layout layout--wide vloca-talks">
+
+		<h1 class="h1" id="vloca-talks">VLOCA talks</h1>
+		<div class="introductionLarge">
+			<p>
+			</p>
+
+		</div>
+
+		<div class="grid grid--is-stacked u-spacer">
+			{% assign sorted = site.vloca-talks | sort: 'highlight' | reverse %}
+			{% for vloca-talk in sorted %}
+
+				<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+					<a href="{{ vloca-talk.url | relative_url}}" class="spotlight yellow">
+						<article>
+							<header class="spotlight__header">
+								<div class="spotlight__image spotlight__image--focus-center-center">
+								aaa{{ vloca_talk.thumb }}bbb{{ "vloca talk.thumb" }}ccc{{ vlocatalk.thumb }}ddd
+									<img class="spotlight__image__img" src="{{ site.baseurl}}{{ vloca-talk.thumb | relative_url}}" alt="">
+								</div>
+								<div class="spotlight__title-wrapper">
+									<h1 class="spotlight__title">{{ vloca-talk.title | escape }}</h1>
+								</div>
+							</header>
+							<div class="spotlight__text-wrapper">
+								<div class="spotlight__text">
+									{{ vloca-talk.teaser | escape }}
+								</div>
+							</div>
+							<div class="category bullet-list bullet-list--location">
+								<div class="bullet-list__item">{{ vloca-talk.location | join: ", "}}</div>
+							</div>
+							<div class="category bullet-list bullet-list--tag">
+								<div class="bullet-list__item">{{ vloca-talk.tags | join: ", "}}</div>
+							</div>
+						</article>
+					</a>
+				</div>
+
+				<!-- contact blok op nieuwpagina -->
+				{% if forloop.index0 == 1 %}
+					<div class="col--1-1 show-mobile">
+						{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
+					</div>
+				{% elsif forloop.index0 == 2 %}
+						<div class="col--1-1 show-tablet">
+						{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
+						</div>
+				{% elsif forloop.index0 == 3 %}
+					<div class="col--1-1 show-desktop">
+					{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
+					</div>
+				{% endif %}
+				<!-- end contact block -->
+
+			{% endfor %}
+
+	  </div>
+	</div>
+</section>
