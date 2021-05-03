@@ -7,29 +7,34 @@
   teaser: Dit is de about-teaser
   permalink: /over-vloca
   order: 2
+  
+- title: VLOCA talks
+  teaser: Dit is de VLOCA-talks-teaser
+  permalink: /vloca-talks
+  order: 3
 
 - title: Kennishub
   teaser: Alles wat je moet weten om te kunnen samenwerken.
   permalink: /kennishub
-  order: 3
+  order: 4
 
 - title: Trajecten
   teaser: Informatie over de concrete VLOCA trajecten
   permalink: '/trajecten'
-  order: 4
+  order: 5
 
   
 - title: FAQ
   teaser: Heeft u een vraag? bekijk onze FAQ.
   permalink: /faq
-  order: 5
+  order: 6
 
 - title: Planning
   teaser: Wanneer zijn de VLOCA events?
   permalink: /calendar/
-  order: 6
+  order: 7
   
 - title: Contacteer ons
   teaser: Achter deze link zit de contactpagina
   permalink: http://stedenbeleid.vlaanderen.be/vloca-contactformulier
-  order: 7
+  order: 8
