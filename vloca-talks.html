@@ -9,22 +9,17 @@ bodyclass: "VLOCA talks"
 	<div class="layout layout--wide vloca-talks">
 
 		<h1 class="h1" id="vloca-talks">VLOCA talks</h1>
-		<div class="introductionLarge">
-			<p>
-			</p>
-
-		</div>
+		
 
 		<div class="grid grid--is-stacked u-spacer">
 			{% assign sorted = site.vloca-talks | sort: 'highlight' | reverse %} 
 			{% for vloca-talk in sorted %}
-
-				<div class="col--3-12 col--4-12--m col--6-12--s col--1-1--xs">
+				<div class="col--4-12 col--6-12--s col--1-1--xs">
 					<a href="{{ vloca-talk.url | relative_url}}" class="spotlight yellow">
-						<article>
-							<header class="spotlight__header">
+						<article>					
+							<header class="spotlight yellow spotlight--link">
 								<div class="spotlight__image spotlight__image--focus-center-center">
-								aaa{{ vloca_talk.thumb }}bbb{{ "vloca talk.thumb" }}ccc{{ vlocatalk.thumb }}ddd
+								{{ vloca_talk.thumb }}
 									<img class="spotlight__image__img" src="{{ site.baseurl}}{{ vloca-talk.thumb | relative_url}}" alt="">
 								</div>
 								<div class="spotlight__title-wrapper">
@@ -45,6 +40,8 @@ bodyclass: "VLOCA talks"
 						</article>
 					</a>
 				</div>
+				
+				
 
 				<!-- contact blok op nieuwpagina -->
 				{% if forloop.index0 == 1 %}
@@ -55,7 +52,7 @@ bodyclass: "VLOCA talks"
 						<div class="col--1-1 show-tablet">
 						{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
 						</div>
-				{% elsif forloop.index0 == 3 %}
+				{% elsif forloop.index0 == 5 %}
 					<div class="col--1-1 show-desktop">
 					{% include crosslink.html block-class="alt shadow" url="/contact/" title="Klaar om mee te helpen met onze community?" text="Maak een profiel aan op de VLOCA kennishub en deel jouw interesses" cta="Maak een profiel aan" icon="kennishub" %}
 					</div>
