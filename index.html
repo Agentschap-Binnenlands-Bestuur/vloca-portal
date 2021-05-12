@@ -21,27 +21,28 @@ og-descrition: "Welcome to the homepage of VLOCA"
       </div>
     </div>
   </section>
-
-  <section class="region">
+<section class="region">
     <div class='layout layout--wide'>
-      <div class="direct-to wide">
-        <label>Direct naar</label>
-        <div class="grid">
-          {% assign directs = site.directs | where:'type', 'home' %}
-          {% for direct in directs %}
-          <div class="col--4-12 col--6-12--s col--1-1--xs">
-            {% if direct.exturl %}
-              <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
-            {% else %}
-              <a href="{{ site.baseurl }}{{ direct.inturl }}" class="link--icon--caret link--block">{{ direct.title }}</a>
-            {% endif %}
+      <div class="grid grid--is-stacked">
+        <div class="col--1-1">
+
+          <div class="quote">
+            <div class="quote__image-wrapper">
+              <img class="quote__image" src="{{ site.baseurl }}/assets/img/quote/bart_somers.jpg" alt="" />
+            </div>
+            <div class="quote__content">
+              <div class="quote__text">We moeten werken aan onze slimme steden. Dat is een positieve les die we moeten trekken uit de coronacrisis. Daarom zetten we VLOCA op, de Vlaamse Open City Architectuur.
+              </div>
+              <div class="quote__author">Bart Somers, Vlaams minister voor Binnenlands Bestuur en Stedenbeleid</div>
+              <div class="quote__reference">
+              </div>
+            </div>
           </div>
-          {% endfor %}
+
         </div>
       </div>
     </div>
   </section>
-
   <section class="region news">
     <div class='layout layout--wide'>
       <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
@@ -161,6 +162,26 @@ og-descrition: "Welcome to the homepage of VLOCA"
   </div>
 
 </section>
+
+<section class="region">
+    <div class='layout layout--wide'>
+      <div class="direct-to wide">
+        <label>Direct naar</label>
+        <div class="grid">
+          {% assign directs = site.directs | where:'type', 'home' %}
+          {% for direct in directs %}
+          <div class="col--4-12 col--6-12--s col--1-1--xs">
+            {% if direct.exturl %}
+              <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ direct.inturl }}" class="link--icon--caret link--block">{{ direct.title }}</a>
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="region">
     <div class="layout layout--wide">
