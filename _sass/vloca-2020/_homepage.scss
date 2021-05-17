@@ -10,6 +10,38 @@
     }
   }
 
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.columnLeft {
+  float: left;
+  width: 12%;
+  padding: 10px;
+}
+
+.columnMid {
+  float: left;
+  width: 70%;
+  padding: 10px;
+}
+
+.columnRight {
+  float: left;
+  width: 18%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  
   .intro {
     .grid > div:last-child{
       margin-top: 4rem;

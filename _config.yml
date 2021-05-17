@@ -30,6 +30,7 @@ plugins:
   - jekyll-feed
 gems:
   - jekyll-paginate-v2
+  - jekyll-twitter-plugin
 exclude:
   - Gemfile
   - Gemfile.lock

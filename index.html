@@ -6,7 +6,11 @@ is_front: true
 og-descrition: "Welcome to the homepage of VLOCA"
 ---
 <div class="home layout">
-
+<div class="row">
+  <div class="columnLeft">
+  &nbsp;
+  </div>
+  <div class="columnMid">
   <section class="region intro">
     <div class='layout layout--wide'>
       <div class="grid">
@@ -21,29 +25,42 @@ og-descrition: "Welcome to the homepage of VLOCA"
       </div>
     </div>
   </section>
-<section class="region">
-    <div class='layout layout--wide'>
-      <div class="grid grid--is-stacked">
-        <div class="col--1-1">
+  <section class="region">
 
-          <div class="quote">
-            <div class="quote__image-wrapper">
-              <img class="quote__image" src="{{ site.baseurl }}/assets/img/quote/bart_somers.jpg" alt="" />
-            </div>
-            <div class="quote__content">
-              <div class="quote__text">We moeten werken aan onze slimme steden. Dat is een positieve les die we moeten trekken uit de coronacrisis. Daarom zetten we VLOCA op, de Vlaamse Open City Architectuur.
-              </div>
-              <div class="quote__author">Bart Somers, Vlaams minister voor Binnenlands Bestuur en Stedenbeleid</div>
-              <div class="quote__reference">
-              </div>
-            </div>
-          </div>
-
+  <div class="layout layout--normal">
+    <div class="block crosslink alt shadow">
+      <div class="crosslink__icon">
+        <div class="badge badge--accent badge--l badge--icon">
+          <i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
         </div>
       </div>
+      <div class="crosslink__text">
+        <h2 class="h4">Meer weten over de kennishub?</h2>
+        <p>Alles wat je moet weten om te kunnen samenwerken.</p>
+      </div>
+      <div class="crosslink__cta">
+        <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/" target="_blank">Kennishub</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+<section class="region no-pad">
+    <div class="block content-split">
+        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
+        <div class="layout layout--wide">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
+            <h2 class="h3">Co-creatie is essentieel</h2>
+            <p>Werk je binnen een lokaal bestuur aan een slim beleid? Ben je aanbieder van innovatieve ICT-oplossingen of doe je academisch onderzoek in dit domein? Maak je deel uit van een burgerinitiatief dat op zoek gaat naar slimme stadsoplossingen? Dan doen we graag beroep op jouw ideeën, kennis en ervaring.</p>
+            <hr class="wave hr" />
+            <h3 class="h4">Vind het op onze kennishub</h3>
+            <p>De VLOCA Kennishub is gebaseerd op een MediaWiki platform. Dit laat toe om principes, concepten, componenten, … van VLOCA in detail te beschrijven, met ruimte om aanpassingen aan te brengen door iedereen die zich registreert. Zo komen we tot gedragen definities en standaarden.</p>
+          </div>
+        </div>
     </div>
   </section>
-  <section class="region news">
+<br><br><br>
+<section class="region news">
     <div class='layout layout--wide'>
       <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
         <div class="col">
@@ -99,7 +116,7 @@ og-descrition: "Welcome to the homepage of VLOCA"
     </div>
   </section>
 
-  <section class="region">
+<section class="region">
     <div class='layout layout--wide'>
       <div class="grid grid--is-stacked">
         <div class="col--1-1">
@@ -121,47 +138,6 @@ og-descrition: "Welcome to the homepage of VLOCA"
       </div>
     </div>
   </section>
-
-  <section class="region">
-  </section>
-
-
-  <section class="region no-pad">
-    <div class="block content-split">
-        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
-        <div class="layout layout--wide">
-          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
-            <h2 class="h3">Co-creatie is essentieel</h2>
-            <p>Werk je binnen een lokaal bestuur aan een slim beleid? Ben je aanbieder van innovatieve ICT-oplossingen of doe je academisch onderzoek in dit domein? Maak je deel uit van een burgerinitiatief dat op zoek gaat naar slimme stadsoplossingen? Dan doen we graag beroep op jouw ideeën, kennis en ervaring.</p>
-            <hr class="wave hr" />
-            <h3 class="h4">Vind het op onze kennishub</h3>
-            <p>De VLOCA Kennishub is gebaseerd op een MediaWiki platform. Dit laat toe om principes, concepten, componenten, … van VLOCA in detail te beschrijven, met ruimte om aanpassingen aan te brengen door iedereen die zich registreert. Zo komen we tot gedragen definities en standaarden.</p>
-          </div>
-        </div>
-    </div>
-  </section>
-
-
-<section class="region">
-
-  <div class="layout layout--normal">
-    <div class="block crosslink alt shadow">
-      <div class="crosslink__icon">
-        <div class="badge badge--accent badge--l badge--icon">
-          <i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="crosslink__text">
-        <h2 class="h4">Meer weten over de kennishub?</h2>
-        <p>Alles wat je moet weten om te kunnen samenwerken.</p>
-      </div>
-      <div class="crosslink__cta">
-        <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/" target="_blank">Kennishub</a>
-      </div>
-    </div>
-  </div>
-
-</section>
 
 <section class="region">
     <div class='layout layout--wide'>
@@ -190,5 +166,16 @@ og-descrition: "Welcome to the homepage of VLOCA"
 
     </div>
   </section>
+</div>
+<div class="columnRight">
+  <section class="region">
+    <div class="layout layout--wide">
+	
+      {% twitter https://twitter.com/ABB_Vlaanderen?ref_src=twsrc%5Etfw maxwidth=500 limit=5 %}
 
+    </div>
+  </section>
+
+</div>
+</div>
 </div>
