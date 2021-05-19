@@ -1,6 +1,7 @@
 _site/
 .sass-cache/
 .jekyll-cache/
+.tweet-cache/
 .jekyll-metadata
 vendor
 *.swp

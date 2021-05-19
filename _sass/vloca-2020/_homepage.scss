@@ -10,6 +10,38 @@
     }
   }
 
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create three equal columns that floats next to each other */
+.columnLeft {
+  float: left;
+  width: 8%;
+  padding: 4px;
+}
+
+.columnMid {
+  float: left;
+  width: 80%;
+  padding: 10px;
+}
+
+.columnRight {
+  float: left;
+  width: 12%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+  
   .intro {
     .grid > div:last-child{
       margin-top: 4rem;
@@ -29,4 +61,9 @@
   @media only screen and (min-width: 767px){
     height: 315px !important;
   }
+}
+
+.twitterBorder {
+  border: 3px solid #1da1f2;
+  border-radius: 10px;
 }
