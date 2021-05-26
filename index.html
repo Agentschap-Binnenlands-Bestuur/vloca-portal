@@ -17,50 +17,44 @@ og-descrition: "Welcome to the homepage of VLOCA"
         <div class="col--6-12 col--1-1--s">
           <h1 class="h1">VLOCA Portaal</h1>
           <p class="introduction">Bouw mee aan diverse projecten en toepassingen voor een slimme Vlaamse regio.</p>
-          <a class="button button__primary" href="{{ site.baseurl }}/over-vloca">Meer weten over VLOCA</a>
-        </div>
+		  <div class="grid">
+			  <div><br>
+				  <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/">Kennishub</a>
+			  </div>
+			  <div>
+				  <a href="{{ site.baseurl }}/over-vloca">&lt; Meer over VLOCA</a>
+			  </div>
+          </div>
+		</div>
         <div class="col--6-12 col--1-1--s">
 		<iframe width="640" height="360" src="https://www.youtube-nocookie.com/embed/yZTfyZCaSLY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </section>
+  
   <section class="region">
-
-  <div class="layout layout--normal">
-    <div class="block crosslink alt shadow">
-      <div class="crosslink__icon">
-        <div class="badge badge--accent badge--l badge--icon">
-          <i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="crosslink__text">
-        <h2 class="h4">Meer weten over de kennishub?</h2>
-        <p>Alles wat je moet weten om te kunnen samenwerken.</p>
-      </div>
-      <div class="crosslink__cta">
-        <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/" target="_blank">Kennishub</a>
-      </div>
-    </div>
-  </div>
-
-</section>
-<section class="region no-pad">
-    <div class="block content-split">
-        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
-        <div class="layout layout--wide">
-          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
-            <h2 class="h3">Co-creatie is essentieel</h2>
-            <p>Werk je binnen een lokaal bestuur aan een slim beleid? Ben je aanbieder van innovatieve ICT-oplossingen of doe je academisch onderzoek in dit domein? Maak je deel uit van een burgerinitiatief dat op zoek gaat naar slimme stadsoplossingen? Dan doen we graag beroep op jouw ideeën, kennis en ervaring.</p>
-            <hr class="wave hr" />
-            <h3 class="h4">Vind het op onze kennishub</h3>
-            <p>De VLOCA Kennishub is gebaseerd op een MediaWiki platform. Dit laat toe om principes, concepten, componenten, … van VLOCA in detail te beschrijven, met ruimte om aanpassingen aan te brengen door iedereen die zich registreert. Zo komen we tot gedragen definities en standaarden.</p>
+    <div class='layout layout--wide'>
+      <div class="direct-to wide">
+        <label>Direct naar traject</label>
+        <div class="grid">
+		  {% assign trajecten = site.trajecten | sort: 'date' | sort: 'highlight' | reverse %}
+          {% for traject in trajecten %}
+		
+         
+          <div class="col--4-12 col--6-12--s col--1-1--xs">
+            {% if traject.url %}
+              <a href="{{ traject.url | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ traject.title }}</a>
+            {% else %}
+              <a href="{{ site.baseurl }}{{ traject.url }}" class="link--icon--caret link--block">{{ traject.title }}</a>
+            {% endif %}
           </div>
+          {% endfor %}
         </div>
+      </div>
     </div>
   </section>
-<br><br><br>
-<section class="region news">
+  <section class="region news">
     <div class='layout layout--wide'>
       <div class="grid grid--align-space-between--l grid--align-space-between--m grid--v-bottom overview-header">
         <div class="col">
@@ -115,8 +109,43 @@ og-descrition: "Welcome to the homepage of VLOCA"
       
     </div>
   </section>
+<section class="region no-pad">
+    <div class="block content-split">
+        <div class="col img" style="background-image:url({{ site.baseurl }}/assets/img/homepage/hand.png)"></div>
+        <div class="layout layout--wide">
+          <div class="content__wrapper col--6-12 col--1-1--s push--1-2--l push--1-2--m push--reset--s">
+            <h2 class="h3">Co-creatie is essentieel</h2>
+            <p>Werk je binnen een lokaal bestuur aan een slim beleid? Ben je aanbieder van innovatieve ICT-oplossingen of doe je academisch onderzoek in dit domein? Maak je deel uit van een burgerinitiatief dat op zoek gaat naar slimme stadsoplossingen? Dan doen we graag beroep op jouw ideeën, kennis en ervaring.</p>
+            <hr class="wave hr" />
+            <h3 class="h4">Vind het op onze kennishub</h3>
+            <p>De VLOCA Kennishub is gebaseerd op een MediaWiki platform. Dit laat toe om principes, concepten, componenten, … van VLOCA in detail te beschrijven, met ruimte om aanpassingen aan te brengen door iedereen die zich registreert. Zo komen we tot gedragen definities en standaarden.</p>
+          </div>
+        </div>
+    </div>
+  </section>
 
-<section class="region">
+
+  <section class="region">
+
+  <div class="layout layout--normal">
+    <div class="block crosslink alt shadow">
+      <div class="crosslink__icon">
+        <div class="badge badge--accent badge--l badge--icon">
+          <i class="badge__icon vi vi-addressbook" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="crosslink__text">
+        <h2 class="h4">Meer weten over de kennishub?</h2>
+        <p>Alles wat je moet weten om te kunnen samenwerken.</p>
+      </div>
+      <div class="crosslink__cta">
+        <a class="button button__primary" href="https://vloca-kennishub.vlaanderen.be/" target="_blank">Kennishub</a>
+      </div>
+    </div>
+  </div>
+
+</section>
+  <section class="region">
     <div class='layout layout--wide'>
       <div class="grid grid--is-stacked">
         <div class="col--1-1">
@@ -139,29 +168,9 @@ og-descrition: "Welcome to the homepage of VLOCA"
     </div>
   </section>
 
-<section class="region">
-    <div class='layout layout--wide'>
-      <div class="direct-to wide">
-        <label>Direct naar</label>
-        <div class="grid">
-          {% assign directs = site.directs | where:'type', 'home' %}
-          {% for direct in directs %}
-          <div class="col--4-12 col--6-12--s col--1-1--xs">
-            {% if direct.exturl %}
-              <a href="{{ direct.exturl | absolute_url }}" target="_blank" class="link--icon--external link--block">{{ direct.title }}</a>
-            {% else %}
-              <a href="{{ site.baseurl }}{{ direct.inturl }}" class="link--icon--caret link--block">{{ direct.title }}</a>
-            {% endif %}
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section class="region">
     <div class="layout layout--wide">
-
+  <br>  <br>
       {% include top-faq.html %}
 
     </div>
